@@ -1,0 +1,56 @@
+﻿@model IEnumerable<Todo.Web.Models.Group.GroupView>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+
+}
+
+<style>
+    .center-parent {
+        text-align: center;
+    }
+</style>
+
+<h1>Group Todo</h1>
+
+<p>
+    <a class="btn btn-outline-primary" asp-controller="Group" asp-action="CreateGroup">Create Group</a>
+</p>
+<table class="table table-striped table-bordered table-hover center-parent">
+    <thead class="thead-dark">
+        <tr>
+            <th>
+                @*@Html.DisplayNameFor(model => model.IDG)*@
+                @Html.DisplayNameFor(model => model.GroupName)
+            </th>
+
+            <th>Add Task</th>
+            <th>Edit</th>
+            <th>Delete</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @*@Html.DisplayFor(modelItem => item.IDG)*@
+                    @Html.DisplayFor(modelItem => item.GroupName)
+                </td>
+                <td>
+                    @Html.ActionLink("", "Index", "Todo", new { id = item.IDG }, new { @class = "fas fa-book-open" })
+                </td>
+                <td>
+                    @Html.ActionLink("", "UpdateGroup", "Group", new { id = item.IDG }, new { @class = "fas fa-edit" })
+                </td>
+                <td>
+                    @Html.ActionLink("", "DeleteGroup", "Group", new { id = item.IDG }, new { @class = "fas fa-eraser", onclick = "return confirm('Are you sure to delete group?')" })
+                </td>
+
+            </tr>
+        }
+    </tbody>
+</table>
+

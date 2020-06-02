@@ -1,0 +1,38 @@
+﻿@model Todo.Web.Models.Group.CreateGroup
+
+@{
+    ViewData["Title"] = "CreateGroup";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h1>  <a class="fas fa-arrow-alt-circle-left" asp-controller="Group" asp-action="Index"></a> Create Group </h1>
+
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="CreateGroup">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            @if (TempData["Done"] != null)
+            {
+                <p class="alert alert-success"> @TempData["Done"]</p>
+            } @if (TempData["Fail"] != null)
+            {
+                <p class="alert alert-success"> @TempData["Fail"]</p>
+            }
+            <div class="form-group">
+                <label asp-for="GroupName" class="control-label"></label>
+                <input asp-for="GroupName" class="form-control" />
+                <span asp-validation-for="GroupName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

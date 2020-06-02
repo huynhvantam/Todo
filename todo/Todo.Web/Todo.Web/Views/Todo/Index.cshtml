@@ -1,0 +1,110 @@
+﻿@model IEnumerable<Todo.Web.Models.Todo.TodoView>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>  <a class="fas fa-arrow-alt-circle-left" asp-controller="Group" asp-action="Index"></a> Group: @ViewBag.Groupname </h1>
+
+<p>
+    <a class="btn btn-outline-primary" asp-controller="Todo" asp-action="CreateTodo">Create Task</a>
+
+</p>
+
+
+
+<style>
+    .textgach {
+        font-weight: bold;
+    }
+
+    .center-parent {
+        text-align: center;
+    }
+</style>
+
+<table class="table" width=100%>
+    <thead class="thead-dark">
+        <tr>
+            <th width=5%>
+                @Html.DisplayNameFor(model => model.ID)
+            </th>
+            <th width=10% class="center-parent">
+                @Html.DisplayNameFor(model => model.DateCreate)
+
+            </th>
+            <th width=85%>
+                @Html.DisplayNameFor(model => model.TaskName)
+            </th>
+            <th class="center-parent" width=5%>
+                @Html.DisplayNameFor(model => model.Important)
+            </th>
+            <th class="center-parent" width=5%>
+                Edit
+            </th>
+            <th class="center-parent" width=5%>
+                Finish
+            </th>
+            <th class="center-parent" width=5%>
+                Delete
+            </th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ID)
+                </td>
+                <td class="center-parent">
+                    @Html.DisplayFor(modelItem => item.DateCreate)
+                </td>
+                @{ if (item.Important == false)
+                    {
+                        <td>
+                            @Html.DisplayFor(modelItem => item.TaskName)
+
+                        </td>
+                    }
+                    else
+                    {
+                        <td class="textgach">
+                            @Html.DisplayFor(modelItem => item.TaskName)
+                        </td>
+                    }
+                }
+
+                @*@Html.DisplayFor(modelItem => item.Important)
+                    @Html.ActionLink("", "ImportantTodo", "Todo", new { id = item.ID }, new { @class = "fas fa-book-open", onclick = "return confirm('Finish Todo" })*@
+
+                @{ if (item.Important == false)
+                    {
+                        <td class="center-parent">
+                            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+                            @Html.ActionLink("", "ImportantTodoGroup", "Todo", new { id = item.ID }, new { @class = "fa fa-star-o", onclick = "return confirm('Finish Todo" })
+
+                        </td>
+                    }
+                    else
+                    {
+                        <td class="center-parent">
+                            @Html.ActionLink("", "ImportantTodoGroup", "Todo", new { id = item.ID }, new { @class = "fa fa-star", onclick = "return confirm('Finish Todo" })
+                        </td>
+                    }
+                }
+                <td class="center-parent">
+                    @Html.ActionLink("", "UpdateTodo", "Todo", new { id = item.ID }, new { @class = "fas fa-edit" })
+                </td>
+                <td class="center-parent">
+                    @Html.ActionLink("", "FinishTodoGroup", "Todo", new { id = item.ID }, new { @class = "fa fa-flag-checkered", onclick = "return confirm('Finish Todo" })
+                </td>
+                <td class="center-parent">
+                    @Html.ActionLink("", "DeleteTodoGroup", "Todo", new { id = item.ID }, new { @class = "fas fa-trash-alt", onclick = "return confirm('Bạn có muốn xóa To-to List này?')" })
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
