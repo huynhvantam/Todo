@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "yFwXtpBu3hpbbvsX+cbUbPyk8zioe9GTB2+WfEWJkaemGEuLYnvG/hJM0cdJjaeMXSlqtnJuE4M/hnJqv27/fg==",
+  "dgSpecHash": "+JGcZAD0OlNcAVz36WSx2VtINRHsLHoj/fVCXeUX/BybV1PtVaGT2hrVrLunGTp6WNWN5yVS53ZUa9GvzpZ1xA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\tamhv\\Desktop\\project\\Company\\todo\\Todo.API\\Todo.DAL\\Todo.DAL.csproj",
+  "projectFilePath": "C:\\Users\\tamhv\\Desktop\\project\\Todo\\todo\\Todo.API\\Todo.DAL\\Todo.DAL.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\tamhv\\.nuget\\packages\\dapper\\2.0.4\\dapper.2.0.4.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",

@@ -238,11 +238,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\tamhv\\Desktop\\project\\Company\\todo\\Todo.API\\Todo.BAL\\Todo.BAL.csproj",
+      "projectUniqueName": "C:\\Users\\tamhv\\Desktop\\project\\Todo\\todo\\Todo.API\\Todo.BAL\\Todo.BAL.csproj",
       "projectName": "Todo.BAL",
-      "projectPath": "C:\\Users\\tamhv\\Desktop\\project\\Company\\todo\\Todo.API\\Todo.BAL\\Todo.BAL.csproj",
+      "projectPath": "C:\\Users\\tamhv\\Desktop\\project\\Todo\\todo\\Todo.API\\Todo.BAL\\Todo.BAL.csproj",
       "packagesPath": "C:\\Users\\tamhv\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\tamhv\\Desktop\\project\\Company\\todo\\Todo.API\\Todo.BAL\\obj\\",
+      "outputPath": "C:\\Users\\tamhv\\Desktop\\project\\Todo\\todo\\Todo.API\\Todo.BAL\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -261,11 +261,11 @@
       "frameworks": {
         "netstandard2.0": {
           "projectReferences": {
-            "C:\\Users\\tamhv\\Desktop\\project\\Company\\todo\\Todo.API\\Todo.BAL.Interface\\Todo.BAL.Interface.csproj": {
-              "projectPath": "C:\\Users\\tamhv\\Desktop\\project\\Company\\todo\\Todo.API\\Todo.BAL.Interface\\Todo.BAL.Interface.csproj"
+            "C:\\Users\\tamhv\\Desktop\\project\\Todo\\todo\\Todo.API\\Todo.BAL.Interface\\Todo.BAL.Interface.csproj": {
+              "projectPath": "C:\\Users\\tamhv\\Desktop\\project\\Todo\\todo\\Todo.API\\Todo.BAL.Interface\\Todo.BAL.Interface.csproj"
             },
-            "C:\\Users\\tamhv\\Desktop\\project\\Company\\todo\\Todo.API\\Todo.DAL.Interface\\Todo.DAL.Interface.csproj": {
-              "projectPath": "C:\\Users\\tamhv\\Desktop\\project\\Company\\todo\\Todo.API\\Todo.DAL.Interface\\Todo.DAL.Interface.csproj"
+            "C:\\Users\\tamhv\\Desktop\\project\\Todo\\todo\\Todo.API\\Todo.DAL.Interface\\Todo.DAL.Interface.csproj": {
+              "projectPath": "C:\\Users\\tamhv\\Desktop\\project\\Todo\\todo\\Todo.API\\Todo.DAL.Interface\\Todo.DAL.Interface.csproj"
             }
           }
         }

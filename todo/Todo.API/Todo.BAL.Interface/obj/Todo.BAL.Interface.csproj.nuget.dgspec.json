@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\tamhv\\Desktop\\project\\Company\\todo\\Todo.API\\Todo.BAL.Interface\\Todo.BAL.Interface.csproj": {}
+    "C:\\Users\\tamhv\\Desktop\\project\\Todo\\todo\\Todo.API\\Todo.BAL.Interface\\Todo.BAL.Interface.csproj": {}
   },
   "projects": {
-    "C:\\Users\\tamhv\\Desktop\\project\\Company\\todo\\Todo.API\\Todo.BAL.Interface\\Todo.BAL.Interface.csproj": {
+    "C:\\Users\\tamhv\\Desktop\\project\\Todo\\todo\\Todo.API\\Todo.BAL.Interface\\Todo.BAL.Interface.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\tamhv\\Desktop\\project\\Company\\todo\\Todo.API\\Todo.BAL.Interface\\Todo.BAL.Interface.csproj",
+        "projectUniqueName": "C:\\Users\\tamhv\\Desktop\\project\\Todo\\todo\\Todo.API\\Todo.BAL.Interface\\Todo.BAL.Interface.csproj",
         "projectName": "Todo.BAL.Interface",
-        "projectPath": "C:\\Users\\tamhv\\Desktop\\project\\Company\\todo\\Todo.API\\Todo.BAL.Interface\\Todo.BAL.Interface.csproj",
+        "projectPath": "C:\\Users\\tamhv\\Desktop\\project\\Todo\\todo\\Todo.API\\Todo.BAL.Interface\\Todo.BAL.Interface.csproj",
         "packagesPath": "C:\\Users\\tamhv\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\tamhv\\Desktop\\project\\Company\\todo\\Todo.API\\Todo.BAL.Interface\\obj\\",
+        "outputPath": "C:\\Users\\tamhv\\Desktop\\project\\Todo\\todo\\Todo.API\\Todo.BAL.Interface\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -30,8 +30,8 @@
         "frameworks": {
           "netstandard2.0": {
             "projectReferences": {
-              "C:\\Users\\tamhv\\Desktop\\project\\Company\\todo\\Todo.API\\Todo.Domain\\Todo.Domain.csproj": {
-                "projectPath": "C:\\Users\\tamhv\\Desktop\\project\\Company\\todo\\Todo.API\\Todo.Domain\\Todo.Domain.csproj"
+              "C:\\Users\\tamhv\\Desktop\\project\\Todo\\todo\\Todo.API\\Todo.Domain\\Todo.Domain.csproj": {
+                "projectPath": "C:\\Users\\tamhv\\Desktop\\project\\Todo\\todo\\Todo.API\\Todo.Domain\\Todo.Domain.csproj"
               }
             }
           }
@@ -66,14 +66,14 @@
         }
       }
     },
-    "C:\\Users\\tamhv\\Desktop\\project\\Company\\todo\\Todo.API\\Todo.Domain\\Todo.Domain.csproj": {
+    "C:\\Users\\tamhv\\Desktop\\project\\Todo\\todo\\Todo.API\\Todo.Domain\\Todo.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\tamhv\\Desktop\\project\\Company\\todo\\Todo.API\\Todo.Domain\\Todo.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\tamhv\\Desktop\\project\\Todo\\todo\\Todo.API\\Todo.Domain\\Todo.Domain.csproj",
         "projectName": "Todo.Domain",
-        "projectPath": "C:\\Users\\tamhv\\Desktop\\project\\Company\\todo\\Todo.API\\Todo.Domain\\Todo.Domain.csproj",
+        "projectPath": "C:\\Users\\tamhv\\Desktop\\project\\Todo\\todo\\Todo.API\\Todo.Domain\\Todo.Domain.csproj",
         "packagesPath": "C:\\Users\\tamhv\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\tamhv\\Desktop\\project\\Company\\todo\\Todo.API\\Todo.Domain\\obj\\",
+        "outputPath": "C:\\Users\\tamhv\\Desktop\\project\\Todo\\todo\\Todo.API\\Todo.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

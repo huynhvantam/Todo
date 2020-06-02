@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "V2+lHEVmcrHsIWv4tW1jft4dESI877Tzy6T3IVp3SyUk895OWBacaubX9HTo7eHolFQi1hZFR4jhMTqZQo4XhQ==",
+  "dgSpecHash": "2gCONtJ0Vp6o7bLbyfqbBQkcPlrcetM2xs520iay+uIHx9rUuGaujcGAw2L/KJ/5aMKz41KsiKjml5Vi4cch0A==",
   "success": true,
-  "projectFilePath": "C:\\Users\\tamhv\\Desktop\\project\\Company\\todo\\Todo.API\\Todo.BAL\\Todo.BAL.csproj",
+  "projectFilePath": "C:\\Users\\tamhv\\Desktop\\project\\Todo\\todo\\Todo.API\\Todo.BAL\\Todo.BAL.csproj",
   "expectedPackageFiles": [
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"

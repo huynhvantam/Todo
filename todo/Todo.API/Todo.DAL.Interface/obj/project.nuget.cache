@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "AUoKNDUXxzI7iQoi5qka9uO993dcEBBNnZj8cS3IOn4CMCtz4s+gkpJQ5Ve9Txa5zVuHUd5OzbbejJ3faQNWkg==",
+  "dgSpecHash": "dzmqUv1D8oFxkO0Q+I0GeXHu6YqHAZVdAw+DQWgqU9QpohJAQo+kSrwfx/jLnl8CYHGxvBpxLAQmc21gFUvkdQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\tamhv\\Desktop\\project\\Company\\todo\\Todo.API\\Todo.DAL.Interface\\Todo.DAL.Interface.csproj",
+  "projectFilePath": "C:\\Users\\tamhv\\Desktop\\project\\Todo\\todo\\Todo.API\\Todo.DAL.Interface\\Todo.DAL.Interface.csproj",
   "expectedPackageFiles": [
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"

@@ -505,5 +505,36 @@ namespace Todo.Web.Controllers
             return RedirectToAction("Index", "Todo", new { id = groupIdC });
             //return RedirectToAction("TodoListAllGroup", "Todo");
         }
+        public IActionResult ProgressEdit(int id)
+        {
+            var result = 0;
+            var url = $"{Common.Common.ApiUrl}/todo/updateprogress/{id}";
+            HttpWebRequest httpWebRequest = (HttpWebRequest)WebRequest.Create(url);
+            httpWebRequest.Method = "PUT";
+            var response = httpWebRequest.GetResponse();
+            {
+                string responseData;
+                Stream responseStream = response.GetResponseStream();
+                try
+                {
+                    StreamReader streamReader = new StreamReader(responseStream);
+                    try
+                    {
+                        responseData = streamReader.ReadToEnd();
+                    }
+                    finally
+                    {
+                        ((IDisposable)streamReader).Dispose();
+                    }
+                }
+                finally
+                {
+                    ((IDisposable)responseStream).Dispose();
+                }
+                result = JsonConvert.DeserializeObject<int>(responseData);
+            }
+            //return RedirectToAction("Index", "Todo", new { id = groupIdC });
+            return RedirectToAction("TodoListAllGroup", "Todo");
+        }
     }
 }

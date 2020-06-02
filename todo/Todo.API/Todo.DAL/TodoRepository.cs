@@ -71,6 +71,7 @@ namespace Todo.DAL
                 parameters.Add("@TaskName", request.TaskName);
                 parameters.Add("@Important", request.Important);
                 parameters.Add("@GroupIDG", request.GroupIDG);
+                parameters.Add("@Progress", request.Progress);
                 var id = SqlMapper.ExecuteScalar<int>(con, "CreateTodo", param: parameters, commandType: CommandType.StoredProcedure);
                 return id;
             }
@@ -202,5 +203,36 @@ namespace Todo.DAL
                 //return 0;
             }
         }
+        public int ProgressEditRP(int Id)
+        {
+            try
+            {
+                DynamicParameters parameters = new DynamicParameters();
+                parameters.Add("@Id", Id);
+                var id = SqlMapper.ExecuteScalar<int>(con, "ProgressEdit", param: parameters, commandType: CommandType.StoredProcedure);
+                return id;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+                //return 0;
+            }
+        }
+        //public int ProgressEditRP(UpdateProgress request)
+        //{
+        //    try
+        //    {
+        //        DynamicParameters parameters = new DynamicParameters();
+        //        parameters.Add("@Id", request.ID);
+        //        var id = SqlMapper.ExecuteScalar<int>(con, "ProgressEdit", param: parameters, commandType: CommandType.StoredProcedure);
+        //        return id;
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        throw ex;
+        //        //return 0;
+        //    }
+
+        //}
     }
 }

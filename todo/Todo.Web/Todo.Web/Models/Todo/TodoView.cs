@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -21,5 +22,8 @@ namespace Todo.Web.Models.Todo
         public int GroupIDG { get; set; }
 
         public bool Finish { get; set; }
+
+        public int Progress { get; set; }
+
     }
 }

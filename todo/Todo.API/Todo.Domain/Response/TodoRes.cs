@@ -12,5 +12,6 @@ namespace Todo.Domain.Response
         public DateTime DateCreate { get; set; }
         public int GroupIDG { get; set; }
         public bool Finish { get; set; }
+        public int Progress { get; set; }
     }
 }

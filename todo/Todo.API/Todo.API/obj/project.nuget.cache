@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "krnb0/9QqjOS7n68BPD9gtLrZhpwnjFmMzeQg7+Gf64OZfWD0ipZQZoCwxVgbDxBX7gJlTh4SdmUSOIL52TV8g==",
+  "dgSpecHash": "wnz5qOzVlqEw+aKide3yZUcYQHzf+9bAildCA85qHHkzz8+2XpnpzbO4uM2wXDOZu7UNt7u+CIsy4R2LXQesfw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\tamhv\\Desktop\\project\\Company\\todo\\Todo.API\\Todo.API\\Todo.API.csproj",
+  "projectFilePath": "C:\\Users\\tamhv\\Desktop\\project\\Todo\\todo\\Todo.API\\Todo.API\\Todo.API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\tamhv\\.nuget\\packages\\dapper\\2.0.4\\dapper.2.0.4.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.aspnet.webapi.client\\5.2.6\\microsoft.aspnet.webapi.client.5.2.6.nupkg.sha512",

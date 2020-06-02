@@ -28,5 +28,7 @@ namespace Todo.BAL.Interface
         bool FinishTodo(int Id);
         bool DeleteFinish(int Id);
         bool DeleteImportant(int Id);
+        //int ProgressEditRP(UpdateProgress request);
+        int ProgressEditRP(int Id);
     }
 }

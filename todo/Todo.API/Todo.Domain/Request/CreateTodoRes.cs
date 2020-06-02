@@ -11,6 +11,6 @@ namespace Todo.Domain.Request
         public bool Important { get; set; }
 
         public int GroupIDG { get; set; }
-
+        public int Progress { get; set; }
     }
 }

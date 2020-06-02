@@ -26,6 +26,9 @@
 <table class="table" width=100%>
     <thead class="thead-dark">
         <tr>
+            <th class="center-parent" width=5%>
+                Progress
+            </th>
             <th width=5%>
                 @Html.DisplayNameFor(model => model.ID)
             </th>
@@ -55,6 +58,10 @@
         @foreach (var item in Model)
         {
             <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Progress)
+                    @Html.ActionLink("", "ProgressEdit", "Todo", new { id = item.ID }, new { @class = "fa fa-flag-checkered", onclick = "return confirm('Finish Todo" })
+                </td>
                 <td>
                     @Html.DisplayFor(modelItem => item.ID)
                 </td>

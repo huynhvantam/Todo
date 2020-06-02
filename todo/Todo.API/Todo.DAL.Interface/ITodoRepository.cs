@@ -22,13 +22,16 @@ namespace Todo.DAL.Interface
         int CreateTodoRP(CreateTodoReq request);
         int UpdateTodoRP(UpdateTodoReq request);
 
+        //int ProgressEditRP(UpdateProgress request);
+
         bool FinishCheckbox(FinishCheckboxReq request);
         bool ImportantTodoRP(UpdateImportantReq request);
-
-
+        //int ProgressEditRP(UpdateProgress request);
+        int ProgressEditRP(int Id);
         bool DeleteTodoRP(int Id);
         bool FinishTodoRP(int Id);
         bool DeleteFinish(int Id);
         bool DeleteImportant(int Id);
+
     }
 }

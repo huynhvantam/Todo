@@ -86,6 +86,16 @@ namespace Todo.BAL
             return _todoRepository.ImportantTodoRP(request);
         }
 
+        public int ProgressEditRP(int Id)
+        {
+            return _todoRepository.ProgressEditRP(Id);
+        }
+
+        //public int ProgressEditRP(UpdateProgress request)
+        //{
+        //    return _todoRepository.ProgressEditRP(request);
+        //}
+
         public int UpdateTodo(UpdateTodoReq request)
         {
             return _todoRepository.UpdateTodoRP(request);

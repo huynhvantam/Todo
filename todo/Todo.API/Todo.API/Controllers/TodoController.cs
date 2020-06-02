@@ -124,5 +124,17 @@ namespace Todo.API.Controllers
         {
             return _todoService.DeleteImportant(id);
         }
+        [HttpPut]
+        [Route("api/todo/updateprogress/{id}")]
+        public int ProgressEdit(int id)
+        {
+            return _todoService.ProgressEditRP(id);
+        }
+        //[HttpDelete]
+        //[Route("api/todo/updateprogress/{id}")]
+        //public bool ProgressEdit(UpdateProgress re)
+        //{
+        //    return _todoService.ProgressEditRP(id);
+        //}
     }
 }
