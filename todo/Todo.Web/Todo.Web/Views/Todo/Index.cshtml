@@ -12,6 +12,13 @@
 
 </p>
 
+<div class="form-inline">
+    <form asp-controller="Todo" asp-action="Index" method="get">
+        <input class="form-control " type="search" placeholder="Search...." aria-label="task" name="task">
+        <button class="btn btn-outline-success " type="submit">Search</button>
+    </form>
+</div>
+
 
 
 <style>
@@ -43,15 +50,17 @@
             <th class="center-parent" width=5%>
                 Edit
             </th>
+
+            <th class="center-parent" width=5%>
+                Progress
+            </th>
             <th class="center-parent" width=5%>
                 Finish
             </th>
             <th class="center-parent" width=5%>
                 Delete
             </th>
-            <th class="center-parent" width=5%>
-                Progress
-            </th>
+
         </tr>
     </thead>
     <tbody>
@@ -100,6 +109,11 @@
                 <td class="center-parent">
                     @Html.ActionLink("", "UpdateTodo", "Todo", new { id = item.ID }, new { @class = "fas fa-edit" })
                 </td>
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.Progress)
+                    @Html.ActionLink("", "ProgressEditGroup", "Todo", new { id = item.ID }, new { @class = "fa fa-flag-checkered", onclick = "return confirm('Finish Todo" })
+                </td>
                 <td class="center-parent">
                     @Html.ActionLink("", "FinishTodoGroup", "Todo", new { id = item.ID }, new { @class = "fa fa-flag-checkered", onclick = "return confirm('Finish Todo" })
                 </td>
@@ -107,8 +121,6 @@
                     @Html.ActionLink("", "DeleteTodoGroup", "Todo", new { id = item.ID }, new { @class = "fas fa-trash-alt", onclick = "return confirm('Bạn có muốn xóa To-to List này?')" })
                 </td>
                 <td>
-                    @Html.DisplayFor(modelItem => item.Progress)
-                    @Html.ActionLink("", "ProgressEdit", "Todo", new { id = item.ID }, new { @class = "fa fa-flag-checkered", onclick = "return confirm('Finish Todo" })
                 </td>
             </tr>
         }

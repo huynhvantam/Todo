@@ -11,24 +11,24 @@ namespace Todo.BAL.Interface
         IList<TodoRes> GetTodoListByGroup(int groupid);
         IList<TodoRes> GetTodoAllGroup();
 
-        IList<TodoRes> GetListImportant();
-        IList<TodoRes> GetListImportantByGroup(int groupid);
-
         IList<TodoRes> GetListFinish();
-        IList<TodoRes> GetListFinishByGroup(int groupid);
-        TodoRes GetTodoById(int Id);
+        IList<TodoRes> FinishGroup(int groupIDG);
 
-        bool FinishCheckbox(FinishCheckboxReq request);
+        IList<TodoRes> SearchTaskGroup(int groupIDG, string Task);
+        IList<TodoRes> SearchTask(string Task);
+
+        IList<TodoRes> GetListImportant();
+        IList<TodoRes> ImportantGroup(int groupIDG);
+        TodoRes GetTodoById(int Id);
         int CreateTodo(CreateTodoReq request);
         int UpdateTodo(UpdateTodoReq request);
+        bool FinishCheckbox(FinishCheckboxReq request);
         bool ImportantTodo(UpdateImportantReq request);
 
-
+        int ProgressEdit(int Id);
         bool DeleteTodo(int Id);
         bool FinishTodo(int Id);
         bool DeleteFinish(int Id);
         bool DeleteImportant(int Id);
-        //int ProgressEditRP(UpdateProgress request);
-        int ProgressEditRP(int Id);
     }
 }

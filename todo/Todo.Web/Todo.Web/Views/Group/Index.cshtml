@@ -25,10 +25,11 @@
                 @*@Html.DisplayNameFor(model => model.IDG)*@
                 @Html.DisplayNameFor(model => model.GroupName)
             </th>
-
-            <th>Add Task</th>
+            <th>Task</th>
+            <th>Create</th>
             <th>Edit</th>
             <th>Delete</th>
+
         </tr>
     </thead>
     <tbody>
@@ -36,8 +37,12 @@
         {
             <tr>
                 <td>
-                    @*@Html.DisplayFor(modelItem => item.IDG)*@
+
                     @Html.DisplayFor(modelItem => item.GroupName)
+                </td>
+                <td>
+
+                    @Html.DisplayFor(modelItem => item.AllTask)
                 </td>
                 <td>
                     @Html.ActionLink("", "Index", "Todo", new { id = item.IDG }, new { @class = "fas fa-book-open" })

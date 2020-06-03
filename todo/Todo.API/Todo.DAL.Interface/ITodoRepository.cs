@@ -8,30 +8,29 @@ namespace Todo.DAL.Interface
 {
     public interface ITodoRepository
     {
-        IList<TodoRes> GetTodoListByGroupRP(int groupid);
-        IList<TodoRes> GetTodoAllGroupRP();
+        IList<TodoRes> GetTodoListByGroup(int groupid);
+        IList<TodoRes> GetTodoAllGroup();
 
-        IList<TodoRes> GetListImportantRP();
-        IList<TodoRes> GetListImportantByGroupRP(int groupid);
+        IList<TodoRes> GetListFinish();
+        IList<TodoRes> FinishGroup(int groupIDG);
 
-        IList<TodoRes> GetListFinishRP();
-        IList<TodoRes> GetListFinishByGroupRP(int id);
-        TodoRes GetTodoByIdRP(int Id);
+        IList<TodoRes> SearchTaskGroup(int groupIDG, string Task);
+        IList<TodoRes> SearchTask(string Task);
 
-
-        int CreateTodoRP(CreateTodoReq request);
-        int UpdateTodoRP(UpdateTodoReq request);
-
-        //int ProgressEditRP(UpdateProgress request);
-
+        IList<TodoRes> GetListImportant();
+        IList<TodoRes> ImportantGroup(int groupIDG);
+        TodoRes GetTodoById(int Id);
+        int CreateTodo(CreateTodoReq request);
+        int UpdateTodo(UpdateTodoReq request);
         bool FinishCheckbox(FinishCheckboxReq request);
-        bool ImportantTodoRP(UpdateImportantReq request);
-        //int ProgressEditRP(UpdateProgress request);
-        int ProgressEditRP(int Id);
-        bool DeleteTodoRP(int Id);
-        bool FinishTodoRP(int Id);
+        bool ImportantTodo(UpdateImportantReq request);
+
+        int ProgressEdit(int Id);
+        bool DeleteTodo(int Id);
+        bool FinishTodo(int Id);
         bool DeleteFinish(int Id);
         bool DeleteImportant(int Id);
+
 
     }
 }

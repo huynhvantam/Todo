@@ -13,5 +13,6 @@ namespace Todo.Web.Models.Group
         [Required(ErrorMessage = "Bạn phải nhập Group Name")]
         [StringLength(maximumLength: 50, MinimumLength = 2, ErrorMessage = "Password phải nhập từ 2>50 ký tự")]
         public string GroupName { get; set; }
+
     }
 }

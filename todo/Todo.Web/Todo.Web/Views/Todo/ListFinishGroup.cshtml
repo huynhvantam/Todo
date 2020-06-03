@@ -41,9 +41,7 @@
                 Delete
             </th>
 
-            <th>
-                @Html.DisplayNameFor(model => model.GroupIDG)
-            </th>
+
         </tr>
     </thead>
     <tbody>
@@ -72,11 +70,9 @@
                 }
 
                 <td class="center-parent">
-                    @Html.ActionLink("", "DeleteTodoFinsih", "Todo", new { id = item.ID }, new { @class = "fas fa-trash-alt", onclick = "return confirm('Bạn có muốn xóa To-to List này?')" })
+                    @Html.ActionLink("", "DeleteTodoFinsih", "Todo", new { id = item.ID }, new { @class = "fas fa-trash-alt" })
                 </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.GroupIDG)
-                </td>
+
             </tr>
         }
     </tbody>

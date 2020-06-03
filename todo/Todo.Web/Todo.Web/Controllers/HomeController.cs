@@ -12,52 +12,53 @@ namespace Todo.Web.Controllers
 {
     public class HomeController : Controller
     {
-        public IActionResult Index()
-        {
-            ViewBag.Message = "Welcome to my demo!";
-            dynamic mymodel = new ExpandoObject();
-            mymodel.Teachers = GetTeachers();
-            mymodel.Students = GetStudents();
-            return View(mymodel);
-        }
 
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
-        {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
-        }
-        public class Teacher
-        {
-            public int TeacherId { get; set; }
-            public string Code { get; set; }
-            public string Name { get; set; }
-        }
+        //public IActionResult Index()
+        //{
+        //    ViewBag.Message = "Welcome to my demo!";
+        //    dynamic mymodel = new ExpandoObject();
+        //    mymodel.Teachers = GetTeachers();
+        //    mymodel.Students = GetStudents();
+        //    return View(mymodel);
+        //}
 
-        public class Student
-        {
-            public int StudentId { get; set; }
-            public string Code { get; set; }
-            public string Name { get; set; }
-            public string EnrollmentNo { get; set; }
-        }
+        //[ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
+        //public IActionResult Error()
+        //{
+        //    return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+        //}
+        //public class Teacher
+        //{
+        //    public int TeacherId { get; set; }
+        //    public string Code { get; set; }
+        //    public string Name { get; set; }
+        //}
 
-        private List<Teacher> GetTeachers()
-        {
-            List<Teacher> teachers = new List<Teacher>();
-            teachers.Add(new Teacher { TeacherId = 1, Code = "TT", Name = "Tejas Trivedi" });
-            teachers.Add(new Teacher { TeacherId = 2, Code = "JT", Name = "Jignesh Trivedi" });
-            teachers.Add(new Teacher { TeacherId = 3, Code = "RT", Name = "Rakesh Trivedi" });
-            return teachers;
-        }
+        //public class Student
+        //{
+        //    public int StudentId { get; set; }
+        //    public string Code { get; set; }
+        //    public string Name { get; set; }
+        //    public string EnrollmentNo { get; set; }
+        //}
 
-        public List<Student> GetStudents()
-        {
-            List<Student> students = new List<Student>();
-            students.Add(new Student { StudentId = 1, Code = "L0001", Name = "Amit Gupta", EnrollmentNo = "201404150001" });
-            students.Add(new Student { StudentId = 2, Code = "L0002", Name = "Chetan Gujjar", EnrollmentNo = "201404150002" });
-            students.Add(new Student { StudentId = 3, Code = "L0003", Name = "Bhavin Patel", EnrollmentNo = "201404150003" });
-            return students;
-        }
+        //private List<Teacher> GetTeachers()
+        //{
+        //    List<Teacher> teachers = new List<Teacher>();
+        //    teachers.Add(new Teacher { TeacherId = 1, Code = "TT", Name = "Tejas Trivedi" });
+        //    teachers.Add(new Teacher { TeacherId = 2, Code = "JT", Name = "Jignesh Trivedi" });
+        //    teachers.Add(new Teacher { TeacherId = 3, Code = "RT", Name = "Rakesh Trivedi" });
+        //    return teachers;
+        //}
+
+        //public List<Student> GetStudents()
+        //{
+        //    List<Student> students = new List<Student>();
+        //    students.Add(new Student { StudentId = 1, Code = "L0001", Name = "Amit Gupta", EnrollmentNo = "201404150001" });
+        //    students.Add(new Student { StudentId = 2, Code = "L0002", Name = "Chetan Gujjar", EnrollmentNo = "201404150002" });
+        //    students.Add(new Student { StudentId = 3, Code = "L0003", Name = "Bhavin Patel", EnrollmentNo = "201404150003" });
+        //    return students;
+        //}
     }
 }
 

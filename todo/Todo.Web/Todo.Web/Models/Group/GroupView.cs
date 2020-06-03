@@ -12,5 +12,6 @@ namespace Todo.Web.Models.Group
         [Display(Name = "Group Name")]
 
         public string GroupName { get; set; }
+        public int AllTask { get; set; }
     }
 }

@@ -12,49 +12,68 @@ namespace Todo.DAL
 {
     public class TodoRepository : BaseRepository, ITodoRepository
     {
-
-        public IList<TodoRes> GetListFinishByGroupRP(int groupid)
-        {
-            DynamicParameters parameters = new DynamicParameters();
-            parameters.Add("@GroupIDG", groupid);
-            IList<TodoRes> getListFinishByGroupRP = SqlMapper.Query<TodoRes>(con, "GetListFinishByGroup", commandType: CommandType.StoredProcedure).ToList();
-            return getListFinishByGroupRP;
-        }
-
-        public IList<TodoRes> GetTodoListByGroupRP(int groupid)
+        public IList<TodoRes> GetTodoListByGroup(int groupid)
         {
             DynamicParameters parameters = new DynamicParameters();
             parameters.Add("@GroupIDG", groupid);
             IList<TodoRes> getTodoListByGroupRP = SqlMapper.Query<TodoRes>(con, "GetTodoListByGroup", parameters, commandType: CommandType.StoredProcedure).ToList();
             return getTodoListByGroupRP;
         }
-        public IList<TodoRes> GetListFinishRP()
-        {
-            IList<TodoRes> getListFinishRP = SqlMapper.Query<TodoRes>(con, "GetListFinish", commandType: CommandType.StoredProcedure).ToList();
-            return getListFinishRP;
-        }
-
-        public IList<TodoRes> GetListImportantRP()
-        {
-            IList<TodoRes> getListImportant = SqlMapper.Query<TodoRes>(con, "GetListImportant", commandType: CommandType.StoredProcedure).ToList();
-            return getListImportant;
-        }
-
-        public IList<TodoRes> GetListImportantByGroupRP(int groupid)
-        {
-            DynamicParameters parameters = new DynamicParameters();
-            parameters.Add("@GroupIDG", groupid);
-            IList<TodoRes> getListImportantByGroup = SqlMapper.Query<TodoRes>(con, "GetListImportantByGroup", commandType: CommandType.StoredProcedure).ToList();
-            return getListImportantByGroup;
-        }
-
-        public IList<TodoRes> GetTodoAllGroupRP()
+        public IList<TodoRes> GetTodoAllGroup()
         {
             IList<TodoRes> getTodoAllGroupRP = SqlMapper.Query<TodoRes>(con, "GetTodoAllGroup", commandType: CommandType.StoredProcedure).ToList();
             return getTodoAllGroupRP;
         }
 
-        public TodoRes GetTodoByIdRP(int Id)
+        public IList<TodoRes> GetListFinish()
+        {
+            IList<TodoRes> getListFinishRP = SqlMapper.Query<TodoRes>(con, "GetListFinish", commandType: CommandType.StoredProcedure).ToList();
+            return getListFinishRP;
+        }
+
+        public IList<TodoRes> FinishGroup(int groupIDG)
+        {
+            DynamicParameters parameters = new DynamicParameters();
+            parameters.Add("@GroupIDG", groupIDG);
+            IList<TodoRes> finishGroup = SqlMapper.Query<TodoRes>(con, "GetListFinishByGroup", param: parameters, commandType: CommandType.StoredProcedure).ToList();
+            return finishGroup;
+        }
+
+        public IList<TodoRes> SearchTaskGroup(int groupIDG, string Task)
+        {
+            DynamicParameters parameters = new DynamicParameters();
+            parameters.Add("@GroupIDG", groupIDG);
+            parameters.Add("@TaskName", Task);
+            IList<TodoRes> searchTask = SqlMapper.Query<TodoRes>(con, "SearchTaskGroup", param: parameters, commandType: CommandType.StoredProcedure).ToList();
+            return searchTask;
+        }
+
+
+        public IList<TodoRes> SearchTask(string Task)
+        {
+            DynamicParameters parameters = new DynamicParameters();
+            parameters.Add("@TaskName", Task);
+            IList<TodoRes> searchTask = SqlMapper.Query<TodoRes>(con, "SearchTask", param: parameters, commandType: CommandType.StoredProcedure).ToList();
+            return searchTask;
+        }
+
+        public IList<TodoRes> GetListImportant()
+        {
+            IList<TodoRes> getListImportant = SqlMapper.Query<TodoRes>(con, "GetListImportant", commandType: CommandType.StoredProcedure).ToList();
+            return getListImportant;
+        }
+
+        public IList<TodoRes> ImportantGroup(int groupIDG)
+        {
+
+            DynamicParameters parameters = new DynamicParameters();
+            parameters.Add("@GroupIDG", groupIDG);
+            IList<TodoRes> importantGroup = SqlMapper.Query<TodoRes>(con, "GetListImportantByGroup", param: parameters, commandType: CommandType.StoredProcedure).ToList();
+            return importantGroup;
+        }
+
+
+        public TodoRes GetTodoById(int Id)
         {
             DynamicParameters parameters = new DynamicParameters();
             parameters.Add("@Id", Id);
@@ -63,7 +82,7 @@ namespace Todo.DAL
         }
 
 
-        public int CreateTodoRP(CreateTodoReq request)
+        public int CreateTodo(CreateTodoReq request)
         {
             try
             {
@@ -82,7 +101,7 @@ namespace Todo.DAL
             }
         }
 
-        public int UpdateTodoRP(UpdateTodoReq request)
+        public int UpdateTodo(UpdateTodoReq request)
         {
             try
             {
@@ -102,7 +121,7 @@ namespace Todo.DAL
             }
         }
 
-        public bool ImportantTodoRP(UpdateImportantReq request)
+        public bool ImportantTodo(UpdateImportantReq request)
         {
             try
             {
@@ -122,7 +141,7 @@ namespace Todo.DAL
         }
 
 
-        public bool DeleteTodoRP(int Id)
+        public bool DeleteTodo(int Id)
         {
             try
             {
@@ -137,7 +156,7 @@ namespace Todo.DAL
                 //return 0;
             }
         }
-        public bool FinishTodoRP(int Id)
+        public bool FinishTodo(int Id)
         {
             try
             {
@@ -203,7 +222,7 @@ namespace Todo.DAL
                 //return 0;
             }
         }
-        public int ProgressEditRP(int Id)
+        public int ProgressEdit(int Id)
         {
             try
             {
@@ -218,21 +237,10 @@ namespace Todo.DAL
                 //return 0;
             }
         }
-        //public int ProgressEditRP(UpdateProgress request)
-        //{
-        //    try
-        //    {
-        //        DynamicParameters parameters = new DynamicParameters();
-        //        parameters.Add("@Id", request.ID);
-        //        var id = SqlMapper.ExecuteScalar<int>(con, "ProgressEdit", param: parameters, commandType: CommandType.StoredProcedure);
-        //        return id;
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        throw ex;
-        //        //return 0;
-        //    }
 
-        //}
+
+
+
+
     }
 }

@@ -84,3 +84,4 @@ C:\Users\tamhv\Desktop\project\Todo\todo\Todo.Web\Todo.Web\obj\Debug\netcoreapp2
 C:\Users\tamhv\Desktop\project\Todo\todo\Todo.Web\Todo.Web\obj\Debug\netcoreapp2.2\Todo.Web.pdb
 C:\Users\tamhv\Desktop\project\Todo\todo\Todo.Web\Todo.Web\obj\Debug\netcoreapp2.2\Todo.Web.genruntimeconfig.cache
 C:\Users\tamhv\Desktop\project\Todo\todo\Todo.Web\Todo.Web\obj\Debug\netcoreapp2.2\Todo.Web.csproj.CopyComplete
+C:\Users\tamhv\Desktop\project\Todo\todo\Todo.Web\Todo.Web\obj\Debug\netcoreapp2.2\Razor\Views\Todo\SearchTask.cshtml.g.cs

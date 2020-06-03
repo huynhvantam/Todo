@@ -18,7 +18,7 @@ namespace Todo.BAL
         }
         public int CreateTodo(CreateTodoReq request)
         {
-            return _todoRepository.CreateTodoRP(request);
+            return _todoRepository.CreateTodo(request);
         }
 
         public bool DeleteFinish(int Id)
@@ -33,7 +33,7 @@ namespace Todo.BAL
 
         public bool DeleteTodo(int Id)
         {
-            return _todoRepository.DeleteTodoRP(Id);
+            return _todoRepository.DeleteTodo(Id);
         }
 
         public bool FinishCheckbox(FinishCheckboxReq request)
@@ -41,64 +41,71 @@ namespace Todo.BAL
             return _todoRepository.FinishCheckbox(request);
         }
 
+        public IList<TodoRes> FinishGroup(int groupIDG)
+        {
+            return _todoRepository.FinishGroup(groupIDG);
+        }
+
         public bool FinishTodo(int Id)
         {
-            return _todoRepository.FinishTodoRP(Id);
+            return _todoRepository.FinishTodo(Id);
         }
 
         public IList<TodoRes> GetListFinish()
         {
-            return _todoRepository.GetListFinishRP();
+            return _todoRepository.GetListFinish();
         }
 
-        public IList<TodoRes> GetListFinishByGroup(int groupid)
-        {
-            return _todoRepository.GetListFinishByGroupRP(groupid);
-        }
 
         public IList<TodoRes> GetListImportant()
         {
-            return _todoRepository.GetListImportantRP();
+            return _todoRepository.GetListImportant();
         }
 
-        public IList<TodoRes> GetListImportantByGroup(int groupid)
-        {
-            return _todoRepository.GetListImportantByGroupRP(groupid);
-        }
 
         public IList<TodoRes> GetTodoAllGroup()
         {
-            return _todoRepository.GetTodoAllGroupRP();
+            return _todoRepository.GetTodoAllGroup();
         }
 
         public TodoRes GetTodoById(int Id)
         {
-            return _todoRepository.GetTodoByIdRP(Id);
+            return _todoRepository.GetTodoById(Id);
         }
 
         public IList<TodoRes> GetTodoListByGroup(int groupid)
         {
-            return _todoRepository.GetTodoListByGroupRP(groupid);
+            return _todoRepository.GetTodoListByGroup(groupid);
+        }
+
+        public IList<TodoRes> ImportantGroup(int groupIDG)
+        {
+            return _todoRepository.ImportantGroup(groupIDG);
         }
 
         public bool ImportantTodo(UpdateImportantReq request)
         {
-            return _todoRepository.ImportantTodoRP(request);
+            return _todoRepository.ImportantTodo(request);
         }
 
-        public int ProgressEditRP(int Id)
+        public int ProgressEdit(int Id)
         {
-            return _todoRepository.ProgressEditRP(Id);
+            return _todoRepository.ProgressEdit(Id);
         }
 
-        //public int ProgressEditRP(UpdateProgress request)
-        //{
-        //    return _todoRepository.ProgressEditRP(request);
-        //}
+        public IList<TodoRes> SearchTask(string Task)
+        {
+            return _todoRepository.SearchTask(Task);
+        }
+
+        public IList<TodoRes> SearchTaskGroup(int groupIDG, string Task)
+        {
+            return _todoRepository.SearchTaskGroup(groupIDG, Task);
+        }
 
         public int UpdateTodo(UpdateTodoReq request)
         {
-            return _todoRepository.UpdateTodoRP(request);
+            return _todoRepository.UpdateTodo(request);
         }
     }
 }

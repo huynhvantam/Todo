@@ -33,14 +33,12 @@ namespace Todo.API.Controllers
         {
             return _todoService.GetListFinish();
         }
-
         [HttpGet]
-        [Route("api/todo/getlistfinishbygroup/{id}")]
-        public IEnumerable<TodoRes> GetListFinishByGroup(int groupid)
+        [Route("api/todo/finishgroup/{groupidg}")]
+        public IEnumerable<TodoRes> FinishGroup(int groupIDG)
         {
-            return _todoService.GetListFinishByGroup(groupid);
+            return _todoService.FinishGroup(groupIDG);
         }
-
         [HttpGet]
         [Route("api/todo/getlistimport")]
         public IEnumerable<TodoRes> GetListImportant()
@@ -48,11 +46,12 @@ namespace Todo.API.Controllers
             return _todoService.GetListImportant();
         }
 
+
         [HttpGet]
-        [Route("api/todo/getlistimportantbygroup/{id}")]
-        public IEnumerable<TodoRes> GetListImportantByGroup(int groupid)
+        [Route("api/todo/important/{groupidg}")]
+        public IEnumerable<TodoRes> ImportantGroup(int groupIDG)
         {
-            return _todoService.GetListImportantByGroup(groupid);
+            return _todoService.ImportantGroup(groupIDG);
         }
 
         [HttpGet]
@@ -128,13 +127,24 @@ namespace Todo.API.Controllers
         [Route("api/todo/updateprogress/{id}")]
         public int ProgressEdit(int id)
         {
-            return _todoService.ProgressEditRP(id);
+            return _todoService.ProgressEdit(id);
         }
-        //[HttpDelete]
-        //[Route("api/todo/updateprogress/{id}")]
-        //public bool ProgressEdit(UpdateProgress re)
-        //{
-        //    return _todoService.ProgressEditRP(id);
-        //}
+
+        [HttpGet]
+        [Route("api/todo/searchtask/{task}")]
+        public IEnumerable<TodoRes> SearchTask(string task)
+        {
+            return _todoService.SearchTask(task);
+        }
+
+
+        [HttpGet]
+        [Route("api/todo/searchtaskgroup/{groupIDG}/{task}")]
+        public IEnumerable<TodoRes> SearchTaskGroup(int groupIDG, string task)
+        {
+            return _todoService.SearchTaskGroup(groupIDG, task);
+        }
+
+
     }
 }
