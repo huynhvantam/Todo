@@ -6,15 +6,62 @@ using System.Net;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
+using Todo.Web.Models.demo;
 using Todo.Web.Models.Todo;
 
 namespace Todo.Web.Controllers
 {
     public class TodoController : Controller
     {
-
         private static int groupIdC = 0;
 
+        public IActionResult Index(int id, string task)
+        {
+            var todo = new List<TodoView>();
+            //var url = $"{Common.Common.ApiUrl}/todo/gettodobygroup/{id}";
+            string url = String.Empty;
+
+
+            if (task == null)
+
+            { url = $"{Common.Common.ApiUrl}/todo/gettodobygroup/{id}"; }
+
+            else
+            { url = $"{Common.Common.ApiUrl}/todo/searchtaskgroup/{id}/{task}"; }
+
+            HttpWebRequest httpWebRequest = (HttpWebRequest)WebRequest.Create(url);
+            httpWebRequest.Method = "GET";
+            var response = httpWebRequest.GetResponse();
+            {
+                string responseData;
+                Stream responseStream = response.GetResponseStream();
+                try
+                {
+                    StreamReader streamReader = new StreamReader(responseStream);
+                    try
+                    {
+                        responseData = streamReader.ReadToEnd();
+                    }
+                    finally
+                    {
+                        ((IDisposable)streamReader).Dispose();
+                    }
+                }
+                finally
+                {
+
+                    ((IDisposable)responseStream).Dispose();
+                }
+                todo = JsonConvert.DeserializeObject<List<TodoView>>(responseData);
+            }
+            groupIdC = id;
+            //ViewBag.AllGroup = ListFinishGroup();
+
+            //ViewData["AllGroup"] = ListFinishGroup();
+            ViewBag.Groupname = ListGroup().Where(p => p.IDG == id).FirstOrDefault().GroupName;
+
+            return View(todo);
+        }
         public IActionResult TodoListAllGroup(string task)
         {
             var groups = new List<TodoView>();
@@ -52,6 +99,7 @@ namespace Todo.Web.Controllers
                 }
                 groups = JsonConvert.DeserializeObject<List<TodoView>>(responseData);
             }
+
             return View(groups);
         }
 
@@ -119,87 +167,6 @@ namespace Todo.Web.Controllers
             return View(groups);
         }
 
-        public IActionResult Index(int id, string task)
-        {
-            var todo = new List<TodoView>();
-            //var url = $"{Common.Common.ApiUrl}/todo/gettodobygroup/{id}";
-            string url = String.Empty;
-
-
-            if (task == null)
-
-            { url = $"{Common.Common.ApiUrl}/todo/gettodobygroup/{id}"; }
-
-            else
-            { url = $"{Common.Common.ApiUrl}/todo/searchtaskgroup/{id}/{task}"; }
-
-
-
-
-            HttpWebRequest httpWebRequest = (HttpWebRequest)WebRequest.Create(url);
-            httpWebRequest.Method = "GET";
-            var response = httpWebRequest.GetResponse();
-            {
-                string responseData;
-                Stream responseStream = response.GetResponseStream();
-                try
-                {
-                    StreamReader streamReader = new StreamReader(responseStream);
-                    try
-                    {
-                        responseData = streamReader.ReadToEnd();
-                    }
-                    finally
-                    {
-                        ((IDisposable)streamReader).Dispose();
-                    }
-                }
-                finally
-                {
-
-                    ((IDisposable)responseStream).Dispose();
-                }
-                todo = JsonConvert.DeserializeObject<List<TodoView>>(responseData);
-            }
-            groupIdC = id;
-            ViewBag.Groupname = ListGroup().Where(p => p.IDG == id).FirstOrDefault().GroupName;
-            return View(todo);
-        }
-
-
-        //public IActionResult Index(int id)
-        //{
-        //    var todo = new List<TodoView>();
-        //    var url = $"{Common.Common.ApiUrl}/todo/gettodobygroup/{id}";
-        //    HttpWebRequest httpWebRequest = (HttpWebRequest)WebRequest.Create(url);
-        //    httpWebRequest.Method = "GET";
-        //    var response = httpWebRequest.GetResponse();
-        //    {
-        //        string responseData;
-        //        Stream responseStream = response.GetResponseStream();
-        //        try
-        //        {
-        //            StreamReader streamReader = new StreamReader(responseStream);
-        //            try
-        //            {
-        //                responseData = streamReader.ReadToEnd();
-        //            }
-        //            finally
-        //            {
-        //                ((IDisposable)streamReader).Dispose();
-        //            }
-        //        }
-        //        finally
-        //        {
-
-        //            ((IDisposable)responseStream).Dispose();
-        //        }
-        //        todo = JsonConvert.DeserializeObject<List<TodoView>>(responseData);
-        //    }
-        //    groupIdC = id;
-        //    ViewBag.Groupname = ListGroup().Where(p => p.IDG == id).FirstOrDefault().GroupName;
-        //    return View(todo);
-        //}
         private List<GroupItem> ListGroup()
         {
             var groups = new List<GroupItem>();

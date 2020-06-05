@@ -1,18 +1,37 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Dynamic;
 using System.IO;
 using System.Linq;
 using System.Net;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
+using Todo.Web.Models.demo;
 using Todo.Web.Models.Group;
 
 namespace Todo.Web.Controllers
 {
     public class GroupController : Controller
-    {
 
+    {
+        private List<Teacher> GetTeachers()
+        {
+            List<Teacher> teachers = new List<Teacher>();
+            teachers.Add(new Teacher { TeacherId = 1, Code = "TT", Name = "Tejas Trivedi" });
+            teachers.Add(new Teacher { TeacherId = 2, Code = "JT", Name = "Jignesh Trivedi" });
+            teachers.Add(new Teacher { TeacherId = 3, Code = "RT", Name = "Rakesh Trivedi" });
+            return teachers;
+        }
+
+        public List<Student> GetStudents()
+        {
+            List<Student> students = new List<Student>();
+            students.Add(new Student { StudentId = 1, Code = "L0001", Name = "Amit Gupta", EnrollmentNo = "201404150001" });
+            students.Add(new Student { StudentId = 2, Code = "L0002", Name = "Chetan Gujjar", EnrollmentNo = "201404150002" });
+            students.Add(new Student { StudentId = 3, Code = "L0003", Name = "Bhavin Patel", EnrollmentNo = "201404150003" });
+            return students;
+        }
         public IActionResult Index()
         {
             var group = new List<GroupView>();
@@ -42,13 +61,16 @@ namespace Todo.Web.Controllers
                 }
                 group = JsonConvert.DeserializeObject<List<GroupView>>(responseData);
             }
+            //ViewBag.Create = CreateGroup();
             return View(group);
         }
         public IActionResult CreateGroup()
         {
+            //ViewBag.Indexx = Index();
             TempData["Done"] = null;
             return View();
         }
+
 
         [HttpPost]
         public IActionResult CreateGroup(CreateGroup model)
@@ -113,6 +135,8 @@ namespace Todo.Web.Controllers
             TempData["Fail"] = null;
             return View(group);
         }
+
+
 
         [HttpPost]
         public IActionResult UpdateGroup(UpdateGroup model)

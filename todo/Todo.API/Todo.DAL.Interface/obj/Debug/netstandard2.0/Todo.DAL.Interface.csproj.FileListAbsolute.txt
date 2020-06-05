@@ -22,3 +22,15 @@ C:\Users\tamhv\Desktop\project\Todo\todo\Todo.API\Todo.DAL.Interface\obj\Debug\n
 C:\Users\tamhv\Desktop\project\Todo\todo\Todo.API\Todo.DAL.Interface\obj\Debug\netstandard2.0\Todo.DAL.Interface.csproj.CopyComplete
 C:\Users\tamhv\Desktop\project\Todo\todo\Todo.API\Todo.DAL.Interface\obj\Debug\netstandard2.0\Todo.DAL.Interface.dll
 C:\Users\tamhv\Desktop\project\Todo\todo\Todo.API\Todo.DAL.Interface\obj\Debug\netstandard2.0\Todo.DAL.Interface.pdb
+C:\Users\tamhv\Desktop\project\Todo\Todo\todo\Todo.API\Todo.DAL.Interface\bin\Debug\netstandard2.0\Todo.DAL.Interface.deps.json
+C:\Users\tamhv\Desktop\project\Todo\Todo\todo\Todo.API\Todo.DAL.Interface\bin\Debug\netstandard2.0\Todo.DAL.Interface.dll
+C:\Users\tamhv\Desktop\project\Todo\Todo\todo\Todo.API\Todo.DAL.Interface\bin\Debug\netstandard2.0\Todo.DAL.Interface.pdb
+C:\Users\tamhv\Desktop\project\Todo\Todo\todo\Todo.API\Todo.DAL.Interface\bin\Debug\netstandard2.0\Todo.Domain.dll
+C:\Users\tamhv\Desktop\project\Todo\Todo\todo\Todo.API\Todo.DAL.Interface\bin\Debug\netstandard2.0\Todo.Domain.pdb
+C:\Users\tamhv\Desktop\project\Todo\Todo\todo\Todo.API\Todo.DAL.Interface\obj\Debug\netstandard2.0\Todo.DAL.Interface.csprojAssemblyReference.cache
+C:\Users\tamhv\Desktop\project\Todo\Todo\todo\Todo.API\Todo.DAL.Interface\obj\Debug\netstandard2.0\Todo.DAL.Interface.csproj.CoreCompileInputs.cache
+C:\Users\tamhv\Desktop\project\Todo\Todo\todo\Todo.API\Todo.DAL.Interface\obj\Debug\netstandard2.0\Todo.DAL.Interface.AssemblyInfoInputs.cache
+C:\Users\tamhv\Desktop\project\Todo\Todo\todo\Todo.API\Todo.DAL.Interface\obj\Debug\netstandard2.0\Todo.DAL.Interface.AssemblyInfo.cs
+C:\Users\tamhv\Desktop\project\Todo\Todo\todo\Todo.API\Todo.DAL.Interface\obj\Debug\netstandard2.0\Todo.DAL.Interface.csproj.CopyComplete
+C:\Users\tamhv\Desktop\project\Todo\Todo\todo\Todo.API\Todo.DAL.Interface\obj\Debug\netstandard2.0\Todo.DAL.Interface.dll
+C:\Users\tamhv\Desktop\project\Todo\Todo\todo\Todo.API\Todo.DAL.Interface\obj\Debug\netstandard2.0\Todo.DAL.Interface.pdb

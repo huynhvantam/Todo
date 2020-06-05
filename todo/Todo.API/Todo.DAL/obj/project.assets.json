@@ -1541,11 +1541,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\tamhv\\Desktop\\project\\Todo\\todo\\Todo.API\\Todo.DAL\\Todo.DAL.csproj",
+      "projectUniqueName": "C:\\Users\\tamhv\\Desktop\\project\\Todo\\Todo\\todo\\Todo.API\\Todo.DAL\\Todo.DAL.csproj",
       "projectName": "Todo.DAL",
-      "projectPath": "C:\\Users\\tamhv\\Desktop\\project\\Todo\\todo\\Todo.API\\Todo.DAL\\Todo.DAL.csproj",
+      "projectPath": "C:\\Users\\tamhv\\Desktop\\project\\Todo\\Todo\\todo\\Todo.API\\Todo.DAL\\Todo.DAL.csproj",
       "packagesPath": "C:\\Users\\tamhv\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\tamhv\\Desktop\\project\\Todo\\todo\\Todo.API\\Todo.DAL\\obj\\",
+      "outputPath": "C:\\Users\\tamhv\\Desktop\\project\\Todo\\Todo\\todo\\Todo.API\\Todo.DAL\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -1564,8 +1564,8 @@
       "frameworks": {
         "netstandard2.0": {
           "projectReferences": {
-            "C:\\Users\\tamhv\\Desktop\\project\\Todo\\todo\\Todo.API\\Todo.DAL.Interface\\Todo.DAL.Interface.csproj": {
-              "projectPath": "C:\\Users\\tamhv\\Desktop\\project\\Todo\\todo\\Todo.API\\Todo.DAL.Interface\\Todo.DAL.Interface.csproj"
+            "C:\\Users\\tamhv\\Desktop\\project\\Todo\\Todo\\todo\\Todo.API\\Todo.DAL.Interface\\Todo.DAL.Interface.csproj": {
+              "projectPath": "C:\\Users\\tamhv\\Desktop\\project\\Todo\\Todo\\todo\\Todo.API\\Todo.DAL.Interface\\Todo.DAL.Interface.csproj"
             }
           }
         }
