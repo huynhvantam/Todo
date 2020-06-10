@@ -24,6 +24,8 @@ namespace Todo.Web.Models.Todo
         public bool Finish { get; set; }
 
         public int Progress { get; set; }
+        public int AllList { get; set; }
+        public int AllListFinish { get; set; }
 
     }
 }

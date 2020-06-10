@@ -34,6 +34,8 @@ namespace Todo.API
             services.AddTransient<IGroupService, GroupService>();
             services.AddTransient<ITodoRepository, TodoRepository>();
             services.AddTransient<ITodoService, TodoService>();
+            services.AddTransient<IListTodoRepository, ListTodoRepository>();
+            services.AddTransient<IListTodoService, ListTodoService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

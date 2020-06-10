@@ -10,16 +10,14 @@ namespace Todo.DAL.Interface
     {
         IList<TodoRes> GetTodoListByGroup(int groupid);
         IList<TodoRes> GetTodoAllGroup();
-
         IList<TodoRes> GetListFinish();
         IList<TodoRes> FinishGroup(int groupIDG);
-
         IList<TodoRes> SearchTaskGroup(int groupIDG, string Task);
         IList<TodoRes> SearchTask(string Task);
-
         IList<TodoRes> GetListImportant();
         IList<TodoRes> ImportantGroup(int groupIDG);
         TodoRes GetTodoById(int Id);
+
         int CreateTodo(CreateTodoReq request);
         int UpdateTodo(UpdateTodoReq request);
         bool FinishCheckbox(FinishCheckboxReq request);

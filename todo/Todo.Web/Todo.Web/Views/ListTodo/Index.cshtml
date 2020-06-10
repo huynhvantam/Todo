@@ -1,0 +1,111 @@
+﻿@model IEnumerable<Todo.Web.Models.ListTodo.ListTodoView>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<style>
+    #colorcornflowerblue {
+        color: cornflowerblue;
+    }
+
+    #colorblack {
+        color: black;
+    }
+
+    #colorgreen {
+        color: green;
+    }
+
+    #colorred {
+        color: red;
+    }
+
+    .textgach {
+        font-weight: bold;
+    }
+
+    .center-parent {
+        text-align: center;
+    }
+</style>
+
+
+<h1>  @Html.ActionLink("", "Index", "Todo", new { id = ViewBag.GroupList }, new { @class = "fas fa-arrow-alt-circle-left" }) Task: @ViewBag.TodoList </h1>
+
+<p>
+    <a class="btn btn-outline-primary" asp-controller="ListTodo" asp-action="CreateListTodo">Create Task</a>
+</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table class="table" width=100%>
+    <thead class="thead-dark">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ListName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Finish)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TodoID)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ListName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Finish)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TodoID)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ })
+
+
+                    @Html.ActionLink("", "DeleteListTodo", "ListTodo", new { id = item.IDL }, new { @id = "colorblack", @class = "fas fa-trash-alt", onclick = "return confirm('Bạn có muốn xóa To-to List này?')" })
+                    @Html.ActionLink("", "FinishListTodo", "ListTodo", new { id = item.IDL }, new { @id = "colorred", @class = "fa fa-flag-checkered", onclick = "return confirm('Finish Todo" })
+                </td>
+
+                @{ if (item.Finish == false)
+                    {
+                        <td class="center-parent">
+                            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+                            @Html.ActionLink("", "FinishListTodo", "ListTodo", new { id = item.IDL }, new { @id = "colorblack", @class = "fa fa-flag-checkered", onclick = "return confirm('Finish Todo" })
+
+                        </td>
+                    }
+                    else
+                    {
+                        <td class="center-parent">
+                            @Html.ActionLink("", "FinishListTodo", "ListTodo", new { id = item.IDL }, new { @id = "colorred", @class = "fa fa-flag-checkered", onclick = "return confirm('Finish Todo" })
+                        </td>
+                    }
+                }
+            </tr>
+        }
+    </tbody>
+</table>

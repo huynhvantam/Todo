@@ -33,6 +33,22 @@
 
 
 <style>
+    #colorcornflowerblue {
+        color: cornflowerblue;
+    }
+
+    #colorblack {
+        color: black;
+    }
+
+    #colorgreen {
+        color: green;
+    }
+
+    #colorred {
+        color: red;
+    }
+
     .textgach {
         font-weight: bold;
     }
@@ -45,6 +61,7 @@
 <table class="table" width=100%>
     <thead class="thead-dark">
         <tr>
+
             <th width=5%>
                 @Html.DisplayNameFor(model => model.ID)
             </th>
@@ -52,8 +69,11 @@
                 @Html.DisplayNameFor(model => model.DateCreate)
 
             </th>
-            <th width=85%>
+            <th width=80%>
                 @Html.DisplayNameFor(model => model.TaskName)
+            </th>
+            <th width=10%>
+                Add
             </th>
             <th class="center-parent" width=5%>
                 @Html.DisplayNameFor(model => model.Important)
@@ -65,7 +85,7 @@
             <th class="center-parent" width=5%>
                 Progress
             </th>
-            <th class="center-parent" width=5%>
+            <th class="center-parent" width=2%>
                 Finish
             </th>
             <th class="center-parent" width=5%>
@@ -78,6 +98,7 @@
         @foreach (var item in Model)
         {
             <tr>
+
                 <td>
                     @Html.DisplayFor(modelItem => item.ID)
                 </td>
@@ -97,10 +118,13 @@
                             @Html.DisplayFor(modelItem => item.TaskName)
                         </td>
                     }
+
                 }
 
-                @*@Html.DisplayFor(modelItem => item.Important)
-                    @Html.ActionLink("", "ImportantTodo", "Todo", new { id = item.ID }, new { @class = "fas fa-book-open", onclick = "return confirm('Finish Todo" })*@
+                <td>
+                    @Html.ActionLink("", "Index", "ListTodo", new { id = item.ID }, new { @id = "colorcornflowerblue", @class = "fas fa-book-open" })
+                    (@Html.DisplayFor(modelItem => item.AllListFinish)/@Html.DisplayFor(modelItem => item.AllList))
+                </td>
 
                 @{ if (item.Important == false)
                     {
@@ -118,18 +142,18 @@
                     }
                 }
                 <td class="center-parent">
-                    @Html.ActionLink("", "UpdateTodo", "Todo", new { id = item.ID }, new { @class = "fas fa-edit" })
+                    @Html.ActionLink("", "UpdateTodo", "Todo", new { id = item.ID }, new { @id = "colorgreen", @class = "fas fa-edit" })
                 </td>
 
                 <td>
                     @Html.DisplayFor(modelItem => item.Progress)
-                    @Html.ActionLink("", "ProgressEditGroup", "Todo", new { id = item.ID }, new { @class = "fa fa-flag-checkered", onclick = "return confirm('Finish Todo" })
+                    @Html.ActionLink("", "ProgressEditGroup", "Todo", new { id = item.ID }, new { @id = "colorred", @class = "fa fa-flag-checkered", onclick = "return confirm('Finish Todo" })
                 </td>
                 <td class="center-parent">
-                    @Html.ActionLink("", "FinishTodoGroup", "Todo", new { id = item.ID }, new { @class = "fa fa-flag-checkered", onclick = "return confirm('Finish Todo" })
+                    @Html.ActionLink("", "FinishTodoGroup", "Todo", new { id = item.ID }, new { @id = "colorred", @class = "fa fa-flag-checkered", onclick = "return confirm('Finish Todo" })
                 </td>
                 <td class="center-parent">
-                    @Html.ActionLink("", "DeleteTodoGroup", "Todo", new { id = item.ID }, new { @class = "fas fa-trash-alt", onclick = "return confirm('Bạn có muốn xóa To-to List này?')" })
+                    @Html.ActionLink("", "DeleteTodoGroup", "Todo", new { id = item.ID }, new { @id = "colorblack", @class = "fas fa-trash-alt", onclick = "return confirm('Bạn có muốn xóa To-to List này?')" })
                 </td>
                 <td>
                 </td>

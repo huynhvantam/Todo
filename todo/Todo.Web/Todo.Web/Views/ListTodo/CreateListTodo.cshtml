@@ -1,0 +1,51 @@
+﻿@model Todo.Web.Models.ListTodo.CreateListTodo
+
+@{
+    ViewData["Title"] = "CreateListTodo";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var todoListV = new List<Todo.Web.Models.ListTodo.TodoItem>();
+    todoListV = ViewBag.TodoList;
+    int todoListIDV = ViewBag.TodoListID;
+}
+
+<div>
+
+    <h1>  <a class="fas fa-arrow-alt-circle-left" asp-controller="ListTodo" asp-action="Index" asp-route-id="@todoListIDV"></a>  Create Todo </h1>
+</div>
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-controller="ListTodo" asp-action="CreateListTodo">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            @if (TempData["Done"] != null)
+            {
+                <p class="alert alert-success"> @TempData["Done"]</p>
+            }
+
+            <div class="form-group" >
+                <label asp-for="TodoID" class="control-label"></label>
+                <select asp-for="TodoID" class="form-control">
+                    @foreach (var item in todoListV)
+                    {
+                        <option  value="@item.ID" selected="@(item.ID ==todoListIDV)">@item.TaskName</option>
+                    }
+                </select>
+                <span asp-validation-for="TodoID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ListName" class="control-label"></label>
+                <input asp-for="ListName" class="form-control" />
+                <span asp-validation-for="ListName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

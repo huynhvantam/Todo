@@ -75,7 +75,6 @@ C:\Users\tamhv\Desktop\project\Todo\Todo\todo\Todo.API\Todo.API\bin\Debug\netcor
 C:\Users\tamhv\Desktop\project\Todo\Todo\todo\Todo.API\Todo.API\bin\Debug\netcoreapp2.2\Todo.DAL.pdb
 C:\Users\tamhv\Desktop\project\Todo\Todo\todo\Todo.API\Todo.API\bin\Debug\netcoreapp2.2\Todo.Domain.pdb
 C:\Users\tamhv\Desktop\project\Todo\Todo\todo\Todo.API\Todo.API\obj\Debug\netcoreapp2.2\Todo.API.csprojAssemblyReference.cache
-C:\Users\tamhv\Desktop\project\Todo\Todo\todo\Todo.API\Todo.API\obj\Debug\netcoreapp2.2\Todo.API.csproj.CoreCompileInputs.cache
 C:\Users\tamhv\Desktop\project\Todo\Todo\todo\Todo.API\Todo.API\obj\Debug\netcoreapp2.2\Todo.API.RazorAssemblyInfo.cache
 C:\Users\tamhv\Desktop\project\Todo\Todo\todo\Todo.API\Todo.API\obj\Debug\netcoreapp2.2\Todo.API.RazorAssemblyInfo.cs
 C:\Users\tamhv\Desktop\project\Todo\Todo\todo\Todo.API\Todo.API\obj\Debug\netcoreapp2.2\Todo.API.AssemblyInfoInputs.cache
@@ -85,3 +84,4 @@ C:\Users\tamhv\Desktop\project\Todo\Todo\todo\Todo.API\Todo.API\obj\Debug\netcor
 C:\Users\tamhv\Desktop\project\Todo\Todo\todo\Todo.API\Todo.API\obj\Debug\netcoreapp2.2\Todo.API.dll
 C:\Users\tamhv\Desktop\project\Todo\Todo\todo\Todo.API\Todo.API\obj\Debug\netcoreapp2.2\Todo.API.pdb
 C:\Users\tamhv\Desktop\project\Todo\Todo\todo\Todo.API\Todo.API\obj\Debug\netcoreapp2.2\Todo.API.genruntimeconfig.cache
+C:\Users\tamhv\Desktop\project\Todo\Todo\todo\Todo.API\Todo.API\obj\Debug\netcoreapp2.2\Todo.API.csproj.CoreCompileInputs.cache

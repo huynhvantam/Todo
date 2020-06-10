@@ -129,3 +129,5 @@ C:\Users\tamhv\Desktop\project\Todo\Todo\todo\Todo.Web\Todo.Web\obj\Debug\netcor
 C:\Users\tamhv\Desktop\project\Todo\Todo\todo\Todo.Web\Todo.Web\obj\Debug\netcoreapp2.2\Todo.Web.pdb
 C:\Users\tamhv\Desktop\project\Todo\Todo\todo\Todo.Web\Todo.Web\obj\Debug\netcoreapp2.2\Todo.Web.genruntimeconfig.cache
 C:\Users\tamhv\Desktop\project\Todo\Todo\todo\Todo.Web\Todo.Web\obj\Debug\netcoreapp2.2\Todo.Web.csproj.CopyComplete
+C:\Users\tamhv\Desktop\project\Todo\Todo\todo\Todo.Web\Todo.Web\obj\Debug\netcoreapp2.2\Razor\Views\ListTodo\Index.cshtml.g.cs
+C:\Users\tamhv\Desktop\project\Todo\Todo\todo\Todo.Web\Todo.Web\obj\Debug\netcoreapp2.2\Razor\Views\ListTodo\CreateListTodo.cshtml.g.cs

@@ -8,6 +8,8 @@ namespace Todo.BAL.Interface
 {
     public interface ITodoService
     {
+
+
         IList<TodoRes> GetTodoListByGroup(int groupid);
         IList<TodoRes> GetTodoAllGroup();
 
