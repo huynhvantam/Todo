@@ -14,19 +14,12 @@ namespace Todo.Web.Controllers
     public class ListTodoController : Controller
     {
         private static int todoList = 0;
-        // GET: ListTodo
         public ActionResult Index(int id)
         {
 
             var todo = new List<ListTodoView>();
             var url = $"{Common.Common.ApiUrl}/listtodo/getlisttodo/{id}";
-            //string url = String.Empty;
-            //if (task == null)
 
-            //{ url = $"{Common.Common.ApiUrl}/todo/gettodobygroup/{id}"; }
-
-            //else
-            //{ url = $"{Common.Common.ApiUrl}/todo/searchtaskgroup/{id}/{task}"; }
 
             HttpWebRequest httpWebRequest = (HttpWebRequest)WebRequest.Create(url);
             httpWebRequest.Method = "GET";
@@ -54,8 +47,6 @@ namespace Todo.Web.Controllers
                 todo = JsonConvert.DeserializeObject<List<ListTodoView>>(responseData);
             }
             todoList = id;
-            //ViewBag.AllGroup = ListFinishGroup();
-            //ViewData["AllGroup"] = ListFinishGroup();
             ViewBag.TodoList = TodoList().Where(p => p.ID == id).FirstOrDefault().TaskName;
             ViewBag.GroupList = TodoList().Where(p => p.ID == id).FirstOrDefault().GroupIDG;
             return View(todo);
@@ -95,10 +86,9 @@ namespace Todo.Web.Controllers
 
         public IActionResult CreateListTodo()
         {
-            //ViewBag.VGgroups = ListGroup();
-            //ViewBag.VGgroupid = groupIdC;
             ViewBag.TodoList = TodoList();
             ViewBag.TodoListID = todoList;
+            ViewBag.TodoListIDd = TodoList().Where(p => p.ID == todoList).FirstOrDefault().TaskName;
             return View();
         }
         [HttpPost]
@@ -127,13 +117,85 @@ namespace Todo.Web.Controllers
                 TempData["Done"] = "đã tạo To-do List thành công";
             }
             ModelState.Clear();
-            //ViewBag.VGgroups = ListGroup();
-            //ViewBag.VGgroupid = groupIdC;
+            //ViewBag.TodoList = TodoList().Where(p => p.ID == id).FirstOrDefault().TaskName;
             ViewBag.TodoList = TodoList();
             ViewBag.TodoListID = todoList;
+            
             return View(new CreateListTodo() { });
         }
 
+        public IActionResult UpdateListTodo(int id)
+        {
+            var nhanvien = new UpdateListTodo();
+            var url = $"{Common.Common.ApiUrl}/listtodo/getlisttobyid/{id}";
+            HttpWebRequest httpWebRequest = (HttpWebRequest)WebRequest.Create(url);
+            httpWebRequest.Method = "GET";
+            var response = httpWebRequest.GetResponse();
+            {
+                string responseData;
+                Stream responseStream = response.GetResponseStream();
+                try
+                {
+                    StreamReader streamReader = new StreamReader(responseStream);
+                    try
+                    {
+                        responseData = streamReader.ReadToEnd();
+                    }
+                    finally
+                    {
+                        ((IDisposable)streamReader).Dispose();
+                    }
+                }
+                finally
+                {
+                    ((IDisposable)responseStream).Dispose();
+                }
+                nhanvien = JsonConvert.DeserializeObject<UpdateListTodo>(responseData);
+            }
+            ViewBag.TodoList = TodoList();
+            ViewBag.TodoListID = todoList;
+            TempData["Done"] = null;
+            TempData["Fail"] = null;
+
+            return View(nhanvien);
+        }
+
+        [HttpPost]
+        public IActionResult UpdateListTodo(UpdateListTodo model)
+        {
+             int editResult = 0;
+            //var url = $"{Common.Common.ApiUrl}/phongban/suaphongban";
+
+            //HttpWebRequest httpWebRequest = (HttpWebRequest)WebRequest.Create(url);
+            var httpWebRequest = (HttpWebRequest)WebRequest.Create($"{Common.Common.ApiUrl}/listtodo/updatetodo");
+            httpWebRequest.ContentType = "application/json";
+            httpWebRequest.Method = "PUT";
+            using (var streamWrite = new StreamWriter(httpWebRequest.GetRequestStream()))
+            {
+                var json = JsonConvert.SerializeObject(model);
+                streamWrite.Write(json);
+            }
+            var httpResponse = (HttpWebResponse)httpWebRequest.GetResponse();
+            using (var streamReader = new StreamReader(httpResponse.GetResponseStream()))
+            {
+                var result = streamReader.ReadToEnd();
+                editResult = int.Parse(result);
+            }
+            ViewBag.TodoList = TodoList();
+            ViewBag.TodoListID = todoList;
+            if (editResult <= 0)
+            {
+                TempData["Fail"] = "TeamData sửa  KHÔNG thành công";
+                return View(model);
+            }
+            else
+            {
+                TempData["Done"] = "TeamData-đã sửa thành công";
+                ModelState.Clear();
+                return View(new UpdateListTodo() { TodoID = todoList });
+            }
+
+        }
 
         public IActionResult DeleteListTodo(int id)
         {
@@ -195,7 +257,6 @@ namespace Todo.Web.Controllers
                 result = JsonConvert.DeserializeObject<bool>(responseData);
             }
             return RedirectToAction("Index", "ListTodo", new { id = todoList });
-
         }
     }
 }

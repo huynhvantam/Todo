@@ -1,0 +1,51 @@
+﻿@model Todo.Web.Models.ListTodo.UpdateListTodo
+
+@{
+    ViewData["Title"] = "UpdateListTodo";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var todoListV = new List<Todo.Web.Models.ListTodo.TodoItem>();
+    todoListV = ViewBag.TodoList;
+    int todoListIDV = ViewBag.TodoListID;
+}
+
+    <div>
+        <h1>  <a class="fas fa-arrow-alt-circle-left" asp-controller="ListTodo" asp-action="Index" asp-route-id="@todoListIDV"></a>  Edit Task</h1>
+
+    </div>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="UpdateListTodo">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            @if (TempData["Done"] != null)
+            {
+                <p class="alert alert-success"> @TempData["Done"]</p>
+            } @if (TempData["Fail"] != null)
+            {
+                <p class="alert alert-success"> @TempData["Fail"]</p>
+            }
+            <div class="form-group">
+                <label asp-for="IDL" class="control-label" hidden></label>
+                <input asp-for="IDL" class="form-control"  hidden/>
+                <span asp-validation-for="IDL" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ListName" class="control-label"></label>
+                <input asp-for="ListName" class="form-control" />
+                <span asp-validation-for="ListName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TodoID" class="control-label" hidden></label>
+                <input asp-for="TodoID" class="form-control"  hidden/>
+                <span asp-validation-for="TodoID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

@@ -29,6 +29,9 @@
     .center-parent {
         text-align: center;
     }
+    #linethrough {
+        text-decoration: line-through;
+    }
 </style>
 
 
@@ -57,14 +60,20 @@
 <table class="table" width=100%>
     <thead class="thead-dark">
         <tr>
-            <th>
+            <th width="5%">
+                @Html.DisplayNameFor(model => model.IDL)
+            </th>
+            <th width="80%">
                 @Html.DisplayNameFor(model => model.ListName)
             </th>
-            <th>
+            <th width="5%">
                 @Html.DisplayNameFor(model => model.Finish)
             </th>
-            <th>
-                @Html.DisplayNameFor(model => model.TodoID)
+            <th width="5%">
+                Edit
+            </th>
+            <th width="5%">
+                Delete
             </th>
             <th></th>
         </tr>
@@ -72,40 +81,49 @@
     <tbody>
         @foreach (var item in Model)
         {
-            <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.ListName)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Finish)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.TodoID)
-                </td>
-                <td>
-                    @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ })
+        <tr>
 
 
-                    @Html.ActionLink("", "DeleteListTodo", "ListTodo", new { id = item.IDL }, new { @id = "colorblack", @class = "fas fa-trash-alt", onclick = "return confirm('Bạn có muốn xóa To-to List này?')" })
-                    @Html.ActionLink("", "FinishListTodo", "ListTodo", new { id = item.IDL }, new { @id = "colorred", @class = "fa fa-flag-checkered", onclick = "return confirm('Finish Todo" })
-                </td>
+            @{ if (item.Finish == false)
+                {
+                    <td class="center-parent">
+                        @Html.DisplayFor(modelItem => item.IDL)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ListName)
+                    </td>
+                    <td class="center-parent">
+                        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+                        @Html.ActionLink("", "FinishListTodo", "ListTodo", new { id = item.IDL }, new { @id = "colorblack", @class = "fa fa-flag-checkered", onclick = "return confirm('Finish Todo" })
+                    </td>
 
-                @{ if (item.Finish == false)
-                    {
-                        <td class="center-parent">
-                            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-                            @Html.ActionLink("", "FinishListTodo", "ListTodo", new { id = item.IDL }, new { @id = "colorblack", @class = "fa fa-flag-checkered", onclick = "return confirm('Finish Todo" })
-
-                        </td>
-                    }
-                    else
-                    {
-                        <td class="center-parent">
-                            @Html.ActionLink("", "FinishListTodo", "ListTodo", new { id = item.IDL }, new { @id = "colorred", @class = "fa fa-flag-checkered", onclick = "return confirm('Finish Todo" })
-                        </td>
-                    }
                 }
-            </tr>
+                else
+                {
+                    <td id="linethrough" class="center-parent">
+                        @Html.DisplayFor(modelItem => item.IDL)
+                    </td>
+                    <td id="linethrough">
+                        @Html.DisplayFor(modelItem => item.ListName)
+                    </td>
+                    <td class="center-parent">
+                        @Html.ActionLink("", "FinishListTodo", "ListTodo", new { id = item.IDL }, new { @id = "colorred", @class = "fa fa-flag-checkered", onclick = "return confirm('Finish Todo" })
+                    </td>
+                }
+            }
+
+            @*<td class="center-parent">
+            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ })
+        </td>*@
+            <td class="center-parent">
+                @Html.ActionLink("", "UpdateListTodo", "ListTodo", new { id = item.IDL }, new { @id = "colorgreen", @class = "fas fa-edit" })
+            </td>
+
+            <td class="center-parent">
+                @Html.ActionLink("", "DeleteListTodo", "ListTodo", new { id = item.IDL }, new { @id = "colorblack", @class = "fas fa-trash-alt", onclick = "return confirm('Bạn có muốn xóa To-to List này?')" })
+            </td>
+
+        </tr>
         }
     </tbody>
 </table>
