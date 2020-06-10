@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\tamhv\\Desktop\\project\\Todo\\Todo\\todo\\Todo.Web\\Todo.Web\\Todo.Web.csproj": {}
+    "C:\\Users\\Admin\\Desktop\\project\\Todo\\todo\\Todo.Web\\Todo.Web\\Todo.Web.csproj": {}
   },
   "projects": {
-    "C:\\Users\\tamhv\\Desktop\\project\\Todo\\Todo\\todo\\Todo.Web\\Todo.Web\\Todo.Web.csproj": {
+    "C:\\Users\\Admin\\Desktop\\project\\Todo\\todo\\Todo.Web\\Todo.Web\\Todo.Web.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\tamhv\\Desktop\\project\\Todo\\Todo\\todo\\Todo.Web\\Todo.Web\\Todo.Web.csproj",
+        "projectUniqueName": "C:\\Users\\Admin\\Desktop\\project\\Todo\\todo\\Todo.Web\\Todo.Web\\Todo.Web.csproj",
         "projectName": "Todo.Web",
-        "projectPath": "C:\\Users\\tamhv\\Desktop\\project\\Todo\\Todo\\todo\\Todo.Web\\Todo.Web\\Todo.Web.csproj",
-        "packagesPath": "C:\\Users\\tamhv\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\tamhv\\Desktop\\project\\Todo\\Todo\\todo\\Todo.Web\\Todo.Web\\obj\\",
+        "projectPath": "C:\\Users\\Admin\\Desktop\\project\\Todo\\todo\\Todo.Web\\Todo.Web\\Todo.Web.csproj",
+        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Admin\\Desktop\\project\\Todo\\todo\\Todo.Web\\Todo.Web\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\tamhv\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -73,7 +73,7 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.300\\RuntimeIdentifierGraph.json"
         }
       }
     }

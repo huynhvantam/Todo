@@ -203,6 +203,7 @@ namespace Todo.Web.Controllers
         {
             ViewBag.VGgroups = ListGroup();
             ViewBag.VGgroupid = groupIdC;
+            ViewBag.VGgroupidd = ListGroup().Where(p => p.IDG == groupIdC).FirstOrDefault().GroupName;
             return View();
         }
         [HttpPost]

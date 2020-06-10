@@ -34,3 +34,15 @@ C:\Users\tamhv\Desktop\project\Todo\Todo\todo\Todo.API\Todo.BAL.Interface\obj\De
 C:\Users\tamhv\Desktop\project\Todo\Todo\todo\Todo.API\Todo.BAL.Interface\obj\Debug\netstandard2.0\Todo.BAL.Interface.csproj.CopyComplete
 C:\Users\tamhv\Desktop\project\Todo\Todo\todo\Todo.API\Todo.BAL.Interface\obj\Debug\netstandard2.0\Todo.BAL.Interface.dll
 C:\Users\tamhv\Desktop\project\Todo\Todo\todo\Todo.API\Todo.BAL.Interface\obj\Debug\netstandard2.0\Todo.BAL.Interface.pdb
+C:\Users\Admin\Desktop\project\Todo\todo\Todo.API\Todo.BAL.Interface\bin\Debug\netstandard2.0\Todo.BAL.Interface.deps.json
+C:\Users\Admin\Desktop\project\Todo\todo\Todo.API\Todo.BAL.Interface\bin\Debug\netstandard2.0\Todo.BAL.Interface.dll
+C:\Users\Admin\Desktop\project\Todo\todo\Todo.API\Todo.BAL.Interface\bin\Debug\netstandard2.0\Todo.BAL.Interface.pdb
+C:\Users\Admin\Desktop\project\Todo\todo\Todo.API\Todo.BAL.Interface\bin\Debug\netstandard2.0\Todo.Domain.dll
+C:\Users\Admin\Desktop\project\Todo\todo\Todo.API\Todo.BAL.Interface\bin\Debug\netstandard2.0\Todo.Domain.pdb
+C:\Users\Admin\Desktop\project\Todo\todo\Todo.API\Todo.BAL.Interface\obj\Debug\netstandard2.0\Todo.BAL.Interface.csprojAssemblyReference.cache
+C:\Users\Admin\Desktop\project\Todo\todo\Todo.API\Todo.BAL.Interface\obj\Debug\netstandard2.0\Todo.BAL.Interface.AssemblyInfoInputs.cache
+C:\Users\Admin\Desktop\project\Todo\todo\Todo.API\Todo.BAL.Interface\obj\Debug\netstandard2.0\Todo.BAL.Interface.AssemblyInfo.cs
+C:\Users\Admin\Desktop\project\Todo\todo\Todo.API\Todo.BAL.Interface\obj\Debug\netstandard2.0\Todo.BAL.Interface.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Desktop\project\Todo\todo\Todo.API\Todo.BAL.Interface\obj\Debug\netstandard2.0\Todo.BAL.Interface.csproj.CopyComplete
+C:\Users\Admin\Desktop\project\Todo\todo\Todo.API\Todo.BAL.Interface\obj\Debug\netstandard2.0\Todo.BAL.Interface.dll
+C:\Users\Admin\Desktop\project\Todo\todo\Todo.API\Todo.BAL.Interface\obj\Debug\netstandard2.0\Todo.BAL.Interface.pdb

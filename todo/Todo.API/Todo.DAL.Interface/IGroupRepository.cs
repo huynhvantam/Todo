@@ -13,5 +13,6 @@ namespace Todo.DAL.Interface
         int CreateGroupRP(CreateGroupReq request);
         int UpdateGroupRP(UpdateGroupRes request);
         bool DeleteGroupRP(int id);
+     
     }
 }

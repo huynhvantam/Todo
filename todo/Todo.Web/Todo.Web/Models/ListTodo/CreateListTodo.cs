@@ -7,6 +7,7 @@ namespace Todo.Web.Models.ListTodo
 {
     public class CreateListTodo
     {
+        public int IDL { get; set; }
         public int TodoID { get; set; }
         public string ListName { get; set; }
     }
