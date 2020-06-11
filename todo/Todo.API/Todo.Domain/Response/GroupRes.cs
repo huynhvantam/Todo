@@ -9,5 +9,6 @@ namespace Todo.Domain.Response
         public int IDG { get; set; }
         public string GroupName { get; set; }
         public int AllTask { get; set; }
+        public int STT { get; set; }
     }
 }
