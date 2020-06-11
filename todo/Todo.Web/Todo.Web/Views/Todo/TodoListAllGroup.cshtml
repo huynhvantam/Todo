@@ -26,6 +26,10 @@
     </div>
 </div>
 
+@*@ViewBag.VGgroups*@
+@ViewBag.VGgroupid
+@*@ViewBag.VGgroupidd*@
+
 
 <style>
     #colorcornflowerblue {
@@ -135,7 +139,7 @@
                 </td>
                 <td>
                     @Html.DisplayFor(modelItem => item.Progress)
-                    @Html.ActionLink("", "ProgressEdit", "Todo", new { id = item.ID }, new { @id = "colorred", @class = "fa fa-flag-checkered" })
+                    @Html.ActionLink("", "ProgressEdit", "Todo", new { id = item.ID }, new { @id = "colorcornflowerblue", @class = "fa fa-flag-checkered" })
                 </td>
                 <td class="center-parent">
                     @Html.ActionLink("", "FinishTodo", "Todo", new { id = item.ID }, new { @id = "colorred", @class = "fa fa-flag-checkered", onclick = "return confirm('Are you sure to finish todo?')" })

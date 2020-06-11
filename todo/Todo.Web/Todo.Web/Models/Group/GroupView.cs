@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace Todo.Web.Models.Group
 {
@@ -13,5 +14,6 @@ namespace Todo.Web.Models.Group
 
         public string GroupName { get; set; }
         public int AllTask { get; set; }
+        public int STT { get; set; }
     }
 }

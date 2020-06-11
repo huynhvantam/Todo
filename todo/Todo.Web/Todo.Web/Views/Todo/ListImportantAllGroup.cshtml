@@ -119,6 +119,10 @@
                         </td>
                     }
                 }
+                <td>
+                    @Html.DisplayFor(modelItem => item.Progress)
+                    @Html.ActionLink("", "ProgressImportant", "Todo", new { id = item.ID }, new { @id = "colorcornflowerblue", @class = "fa fa-flag-checkered" })
+                </td>
                 <td class="center-parent">
                     @Html.ActionLink("", "UpdateTodo", "Todo", new { id = item.ID }, new { @id = "colorgreen", @class = "fas fa-edit" })
                 </td>

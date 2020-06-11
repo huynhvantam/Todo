@@ -13,7 +13,7 @@ namespace Todo.Web.Controllers
 {
     public class TodoController : Controller
     {
-        private static int groupIdC = 0;
+        private static int groupIdC = 1;
 
         public IActionResult Index(int id, string task)
         {
@@ -87,6 +87,9 @@ namespace Todo.Web.Controllers
                 }
                 todos = JsonConvert.DeserializeObject<List<TodoView>>(responseData);
             }
+            ViewBag.VGgroups = ListGroup();
+            ViewBag.VGgroupid = groupIdC;
+            //ViewBag.VGgroupidd = ListGroup().Where(p => p.IDG == groupIdC).FirstOrDefault().GroupName;
             return View(todos);
         }
 
@@ -187,7 +190,7 @@ namespace Todo.Web.Controllers
         {
             ViewBag.VGgroups = ListGroup();
             ViewBag.VGgroupid = groupIdC;
-            //ViewBag.VGgroupidd = ListGroup().Where(p => p.IDG == groupIdC).FirstOrDefault().GroupName;
+            ViewBag.VGgroupidd = ListGroup().Where(p => p.IDG == groupIdC).FirstOrDefault().GroupName;
             return View();
         }
         [HttpPost]
@@ -603,5 +606,35 @@ namespace Todo.Web.Controllers
             return RedirectToAction("Index", "Todo", new { id = groupIdC });
         }
 
+        public IActionResult ProgressImportant(int id)
+        {
+            var result = 0;
+            var url = $"{Common.Common.ApiUrl}/todo/updateprogress/{id}";
+            HttpWebRequest httpWebRequest = (HttpWebRequest)WebRequest.Create(url);
+            httpWebRequest.Method = "PUT";
+            var response = httpWebRequest.GetResponse();
+            {
+                string responseData;
+                Stream responseStream = response.GetResponseStream();
+                try
+                {
+                    StreamReader streamReader = new StreamReader(responseStream);
+                    try
+                    {
+                        responseData = streamReader.ReadToEnd();
+                    }
+                    finally
+                    {
+                        ((IDisposable)streamReader).Dispose();
+                    }
+                }
+                finally
+                {
+                    ((IDisposable)responseStream).Dispose();
+                }
+                result = JsonConvert.DeserializeObject<int>(responseData);
+            }
+            return RedirectToAction("ListImportantAllGroup", "Todo");
+        }
     }
 }
