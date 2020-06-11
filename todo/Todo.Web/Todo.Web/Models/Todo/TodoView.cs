@@ -11,7 +11,7 @@ namespace Todo.Web.Models.Todo
     {
         [Display(Name = "ID")]
         public int ID { get; set; }
-        [Display(Name = "Task Name")]
+        [Display(Name = "Todo Name")]
         public string TaskName { get; set; }
 
         public bool Important { get; set; }

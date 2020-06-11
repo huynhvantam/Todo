@@ -19,6 +19,30 @@
         margin: 10px;
         padding: 10px;
     }
+
+    #colorcornflowerblue {
+        color: cornflowerblue;
+    }
+
+    #colorblack {
+        color: black;
+    }
+
+    #colorgreen {
+        color: green;
+    }
+
+    #colorred {
+        color: red;
+    }
+
+    .textgach {
+        font-weight: bold;
+    }
+
+    .center-parent {
+        text-align: center;
+    }
 </style>
 
 
@@ -146,7 +170,7 @@
                             @*@Html.DisplayNameFor(model => model.IDG)*@
                             @Html.DisplayNameFor(model => model.GroupName)
                         </th>
-                        <th>Task</th>
+                        <th>Todo</th>
                         <th>Create</th>
                         <th>Edit</th>
                         <th>Delete</th>
@@ -166,13 +190,13 @@
                                 @Html.DisplayFor(modelItem => item.AllTask)
                             </td>
                             <td>
-                                @Html.ActionLink("", "Index", "Todo", new { id = item.IDG }, new { @class = "fas fa-book-open" })
+                                @Html.ActionLink("", "Index", "Todo", new { id = item.IDG }, new { @id = "colorcornflowerblue", @class = "fas fa-book-open" })
                             </td>
                             <td>
-                                @Html.ActionLink("", "UpdateGroup", "Group", new { id = item.IDG }, new { @class = "fas fa-edit" })
+                                @Html.ActionLink("", "UpdateGroup", "Group", new { id = item.IDG }, new { @id = "colorgreen", @class = "fas fa-edit" })
                             </td>
                             <td>
-                                @Html.ActionLink("", "DeleteGroup", "Group", new { id = item.IDG }, new { @class = "fas fa-eraser", onclick = "return confirm('Are you sure to delete group?')" })
+                                @Html.ActionLink("", "DeleteGroup", "Group", new { id = item.IDG }, new { @id = "colorblack", @class = "fas fa-trash-alt", onclick = "return confirm('Are you sure to delete group?')" })
                             </td>
 
                         </tr>
