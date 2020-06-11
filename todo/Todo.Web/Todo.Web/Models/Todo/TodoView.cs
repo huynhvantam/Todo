@@ -22,7 +22,7 @@ namespace Todo.Web.Models.Todo
         public int GroupIDG { get; set; }
 
         public bool Finish { get; set; }
-
+        public int STT { get; set; }
         public int Progress { get; set; }
         public int AllList { get; set; }
         public int AllListFinish { get; set; }

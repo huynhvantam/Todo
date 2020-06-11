@@ -10,6 +10,6 @@ namespace Todo.Domain.Response
         public string ListName { get; set; }
         public bool Finish { get; set; }
         public int TodoID { get; set; }
-
+        public int STT { get; set; }
     }
 }

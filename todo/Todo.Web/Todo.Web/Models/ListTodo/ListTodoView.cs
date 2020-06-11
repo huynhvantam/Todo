@@ -14,5 +14,6 @@ namespace Todo.Web.Models.ListTodo
         public string ListName { get; set; }
         public bool Finish { get; set; }
         public int TodoID { get; set; }
+        public int STT { get; set; }
     }
 }

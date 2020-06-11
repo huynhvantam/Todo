@@ -15,5 +15,6 @@ namespace Todo.Domain.Response
         public int Progress { get; set; }
         public int AllList { get; set; }
         public int AllListFinish { get; set; }
+        public int STT { get; set; }
     }
 }
