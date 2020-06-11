@@ -89,7 +89,7 @@ namespace Todo.Web.Controllers
             }
             ViewBag.VGgroups = ListGroup();
             ViewBag.VGgroupid = groupIdC;
-            //ViewBag.VGgroupidd = ListGroup().Where(p => p.IDG == groupIdC).FirstOrDefault().GroupName;
+            ViewBag.VGgroupidd = ListGroup().Where(p => p.IDG == groupIdC).FirstOrDefault().GroupName;
             return View(todos);
         }
 
@@ -121,6 +121,9 @@ namespace Todo.Web.Controllers
                 }
                 todos = JsonConvert.DeserializeObject<List<TodoView>>(responseData);
             }
+            ViewBag.VGgroups = ListGroup();
+            ViewBag.VGgroupid = groupIdC;
+            ViewBag.VGgroupidd = ListGroup().Where(p => p.IDG == groupIdC).FirstOrDefault().GroupName;
             return View(todos);
         }
 

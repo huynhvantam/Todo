@@ -87,12 +87,34 @@
                 <td>
                     @Html.ActionLink("", "Index", "Todo", new { id = item.IDG }, new { @id = "colorcornflowerblue", @class = "fas fa-book-open" })
                 </td>
-                <td>
-                    @Html.ActionLink("", "UpdateGroup", "Group", new { id = item.IDG }, new { @id = "colorgreen", @class = "fas fa-edit" })
-                </td>
-                <td>
-                    @Html.ActionLink("", "DeleteGroup", "Group", new { id = item.IDG }, new { @id = "colorblack", @class = "fas fa-trash-alt", onclick = "return confirm('Are you sure to delete group?')" })
-                </td>
+
+
+
+                @{ if (item.IDG == 1)
+                    {
+                        <td>
+                            <p>Default</p>
+                        </td>
+                        <td>
+                            <p>Default</p>
+                        </td>
+                    }
+                    else
+                    {
+                        <td>
+                            @Html.ActionLink("", "UpdateGroup", "Group", new { id = item.IDG }, new { @id = "colorgreen", @class = "fas fa-edit" })
+                        </td>
+                        <td>
+                            @Html.ActionLink("", "DeleteGroup", "Group", new { id = item.IDG }, new { @id = "colorblack", @class = "fas fa-trash-alt", onclick = "return confirm('Are you sure to delete group?')" })
+                        </td>
+                    }
+
+
+
+                }
+
+
+
 
             </tr>
         }
