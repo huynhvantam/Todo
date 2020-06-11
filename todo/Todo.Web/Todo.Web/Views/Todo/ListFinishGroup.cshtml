@@ -4,16 +4,31 @@
     ViewData["Title"] = "ListFinishGroup";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-<h1>  <a class="fas fa-arrow-alt-circle-left" asp-controller="Todo" asp-action="TodoListAllGroup"></a> Task Finish </h1>
+<h1>  <a class="fas fa-arrow-alt-circle-left" asp-controller="Todo" asp-action="TodoListAllGroup"></a> Todo Finish </h1>
 
 <p>
-    <a class="btn btn-outline-primary" asp-controller="Todo" asp-action="CreateTodo">Create Task</a>
+    <a class="btn btn-outline-primary" asp-controller="Todo" asp-action="CreateTodo">Create Todo</a>
 
 </p>
 
 
-
 <style>
+    #colorcornflowerblue {
+        color: cornflowerblue;
+    }
+
+    #colorblack {
+        color: black;
+    }
+
+    #colorgreen {
+        color: green;
+    }
+
+    #colorred {
+        color: red;
+    }
+
     .textgach {
         font-weight: bold;
     }
@@ -70,7 +85,7 @@
                 }
 
                 <td class="center-parent">
-                    @Html.ActionLink("", "DeleteTodoFinsih", "Todo", new { id = item.ID }, new { @class = "fas fa-trash-alt" })
+                    @Html.ActionLink("", "DeleteTodoFinsih", "Todo", new { id = item.ID }, new { @id = "colorblack", @class = "fas fa-trash-alt" })
                 </td>
 
             </tr>

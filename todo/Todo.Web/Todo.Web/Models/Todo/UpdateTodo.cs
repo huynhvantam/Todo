@@ -9,7 +9,9 @@ namespace Todo.Web.Models.Todo
     public class UpdateTodo
     {
         public int ID { get; set; }
-        [Display(Name = "Task Name")]
+        [Display(Name = "Todo Name")]
+        [Required(ErrorMessage = "Do not empty")]
+        [StringLength(maximumLength: 255, MinimumLength = 2, ErrorMessage = "Task Name must enter 2> 255 characters")]
         public string TaskName { get; set; }
         public bool Important { get; set; }
         [Display(Name = "Change to Group")]

@@ -18,17 +18,11 @@ namespace Todo.Web.Controllers
         public IActionResult Index(int id, string task)
         {
             var todo = new List<TodoView>();
-            //var url = $"{Common.Common.ApiUrl}/todo/gettodobygroup/{id}";
             string url = String.Empty;
-
-
             if (task == null)
-
             { url = $"{Common.Common.ApiUrl}/todo/gettodobygroup/{id}"; }
-
             else
             { url = $"{Common.Common.ApiUrl}/todo/searchtaskgroup/{id}/{task}"; }
-
             HttpWebRequest httpWebRequest = (HttpWebRequest)WebRequest.Create(url);
             httpWebRequest.Method = "GET";
             var response = httpWebRequest.GetResponse();
@@ -49,31 +43,26 @@ namespace Todo.Web.Controllers
                 }
                 finally
                 {
-
                     ((IDisposable)responseStream).Dispose();
                 }
                 todo = JsonConvert.DeserializeObject<List<TodoView>>(responseData);
             }
             groupIdC = id;
-            //ViewBag.AllGroup = ListFinishGroup();
+            ViewBag.AllGroup = ListFinishGroup();
 
-            //ViewData["AllGroup"] = ListFinishGroup();
+            ViewData["AllGroup"] = ListFinishGroup();
             ViewBag.Groupname = ListGroup().Where(p => p.IDG == id).FirstOrDefault().GroupName;
 
             return View(todo);
         }
         public IActionResult TodoListAllGroup(string task)
         {
-            var groups = new List<TodoView>();
+            var todos = new List<TodoView>();
             string url = String.Empty;
-
             if (task == null)
-
             { url = $"{Common.Common.ApiUrl}/todo/gettodoallgroup"; }
-
             else
             { url = $"{Common.Common.ApiUrl}/todo/searchtask/{task}"; }
-
             HttpWebRequest httpWebRequest = (HttpWebRequest)WebRequest.Create(url);
             httpWebRequest.Method = "GET";
             var response = httpWebRequest.GetResponse();
@@ -94,18 +83,16 @@ namespace Todo.Web.Controllers
                 }
                 finally
                 {
-
                     ((IDisposable)responseStream).Dispose();
                 }
-                groups = JsonConvert.DeserializeObject<List<TodoView>>(responseData);
+                todos = JsonConvert.DeserializeObject<List<TodoView>>(responseData);
             }
-
-            return View(groups);
+            return View(todos);
         }
 
         public IActionResult ListImportantAllGroup()
         {
-            var groups = new List<TodoView>();
+            var todos = new List<TodoView>();
             var url = $"{Common.Common.ApiUrl}/todo/getlistimport";
             HttpWebRequest httpWebRequest = (HttpWebRequest)WebRequest.Create(url);
             httpWebRequest.Method = "GET";
@@ -127,17 +114,16 @@ namespace Todo.Web.Controllers
                 }
                 finally
                 {
-
                     ((IDisposable)responseStream).Dispose();
                 }
-                groups = JsonConvert.DeserializeObject<List<TodoView>>(responseData);
+                todos = JsonConvert.DeserializeObject<List<TodoView>>(responseData);
             }
-            return View(groups);
+            return View(todos);
         }
 
         public IActionResult ListFinishGroup()
         {
-            var groups = new List<TodoView>();
+            var todos = new List<TodoView>();
             var url = $"{Common.Common.ApiUrl}/todo/getlistfinish";
             HttpWebRequest httpWebRequest = (HttpWebRequest)WebRequest.Create(url);
             httpWebRequest.Method = "GET";
@@ -159,17 +145,16 @@ namespace Todo.Web.Controllers
                 }
                 finally
                 {
-
                     ((IDisposable)responseStream).Dispose();
                 }
-                groups = JsonConvert.DeserializeObject<List<TodoView>>(responseData);
+                todos = JsonConvert.DeserializeObject<List<TodoView>>(responseData);
             }
-            return View(groups);
+            return View(todos);
         }
 
         private List<GroupItem> ListGroup()
         {
-            var groups = new List<GroupItem>();
+            var todos = new List<GroupItem>();
             var url = $"{Common.Common.ApiUrl}/group/getlistgroup";
             HttpWebRequest httpWebRequest = (HttpWebRequest)WebRequest.Create(url);
             httpWebRequest.Method = "GET";
@@ -191,19 +176,18 @@ namespace Todo.Web.Controllers
                 }
                 finally
                 {
-
                     ((IDisposable)responseStream).Dispose();
                 }
-                groups = JsonConvert.DeserializeObject<List<GroupItem>>(responseData);
+                todos = JsonConvert.DeserializeObject<List<GroupItem>>(responseData);
             }
-            return groups;
+            return todos;
         }
 
         public IActionResult CreateTodo()
         {
             ViewBag.VGgroups = ListGroup();
             ViewBag.VGgroupid = groupIdC;
-            ViewBag.VGgroupidd = ListGroup().Where(p => p.IDG == groupIdC).FirstOrDefault().GroupName;
+            //ViewBag.VGgroupidd = ListGroup().Where(p => p.IDG == groupIdC).FirstOrDefault().GroupName;
             return View();
         }
         [HttpPost]
@@ -229,7 +213,7 @@ namespace Todo.Web.Controllers
 
             if (result > 0)
             {
-                TempData["Done"] = "đã tạo To-do List thành công";
+                TempData["Done"] = "Todo create successfully";
             }
             ModelState.Clear();
             ViewBag.VGgroups = ListGroup();
@@ -267,6 +251,8 @@ namespace Todo.Web.Controllers
             }
             ViewBag.VGgroups = ListGroup();
             ViewBag.VGgroupid = groupIdC;
+            ViewBag.VGgroupidd = ListGroup().Where(p => p.IDG == groupIdC).FirstOrDefault().GroupName;
+
             TempData["Done"] = null;
             TempData["Fail"] = null;
 
@@ -276,9 +262,6 @@ namespace Todo.Web.Controllers
         public IActionResult UpdateTodo(UpdateTodo model)
         {
             int editResult = 0;
-            //var url = $"{Common.Common.ApiUrl}/phongban/suaphongban";
-
-            //HttpWebRequest httpWebRequest = (HttpWebRequest)WebRequest.Create(url);
             var httpWebRequest = (HttpWebRequest)WebRequest.Create($"{Common.Common.ApiUrl}/todo/updatetodo");
             httpWebRequest.ContentType = "application/json";
             httpWebRequest.Method = "PUT";
@@ -297,12 +280,12 @@ namespace Todo.Web.Controllers
             ViewBag.VGgroupid = groupIdC;
             if (editResult <= 0)
             {
-                TempData["Fail"] = "TeamData sửa  KHÔNG thành công";
+                TempData["Fail"] = "Todo edit fail";
                 return View(model);
             }
             else
             {
-                TempData["Done"] = "TeamData-đã sửa thành công";
+                TempData["Done"] = "Todo edit successfully";
                 ModelState.Clear();
                 return View(new UpdateTodo() { GroupIDG = groupIdC });
             }
@@ -494,7 +477,6 @@ namespace Todo.Web.Controllers
                 }
                 result = JsonConvert.DeserializeObject<bool>(responseData);
             }
-            //return RedirectToAction("Index", "Todo", new { id = groupIdC });
             return RedirectToAction("TodoListAllGroup", "Todo");
         }
 
@@ -527,7 +509,6 @@ namespace Todo.Web.Controllers
                 result = JsonConvert.DeserializeObject<bool>(responseData);
             }
             return RedirectToAction("Index", "Todo", new { id = groupIdC });
-            //return RedirectToAction("TodoListAllGroup", "Todo");
         }
 
         public IActionResult ImportantTodoImportant(int id)
@@ -558,7 +539,6 @@ namespace Todo.Web.Controllers
                 }
                 result = JsonConvert.DeserializeObject<bool>(responseData);
             }
-            //return RedirectToAction("Index", "Todo", new { id = groupIdC });
             return RedirectToAction("ListImportantAllGroup", "Todo");
         }
         public IActionResult ProgressEdit(int id)
@@ -589,7 +569,6 @@ namespace Todo.Web.Controllers
                 }
                 result = JsonConvert.DeserializeObject<int>(responseData);
             }
-            //return RedirectToAction("Index", "Todo", new { id = groupIdC });
             return RedirectToAction("TodoListAllGroup", "Todo");
         }
 
@@ -622,7 +601,6 @@ namespace Todo.Web.Controllers
                 result = JsonConvert.DeserializeObject<int>(responseData);
             }
             return RedirectToAction("Index", "Todo", new { id = groupIdC });
-            //return RedirectToAction("TodoListAllGroup", "Todo");
         }
 
     }

@@ -15,23 +15,6 @@ namespace Todo.Web.Controllers
     public class GroupController : Controller
 
     {
-        private List<Teacher> GetTeachers()
-        {
-            List<Teacher> teachers = new List<Teacher>();
-            teachers.Add(new Teacher { TeacherId = 1, Code = "TT", Name = "Tejas Trivedi" });
-            teachers.Add(new Teacher { TeacherId = 2, Code = "JT", Name = "Jignesh Trivedi" });
-            teachers.Add(new Teacher { TeacherId = 3, Code = "RT", Name = "Rakesh Trivedi" });
-            return teachers;
-        }
-
-        public List<Student> GetStudents()
-        {
-            List<Student> students = new List<Student>();
-            students.Add(new Student { StudentId = 1, Code = "L0001", Name = "Amit Gupta", EnrollmentNo = "201404150001" });
-            students.Add(new Student { StudentId = 2, Code = "L0002", Name = "Chetan Gujjar", EnrollmentNo = "201404150002" });
-            students.Add(new Student { StudentId = 3, Code = "L0003", Name = "Bhavin Patel", EnrollmentNo = "201404150003" });
-            return students;
-        }
         public IActionResult Index()
         {
             var group = new List<GroupView>();
@@ -61,17 +44,16 @@ namespace Todo.Web.Controllers
                 }
                 group = JsonConvert.DeserializeObject<List<GroupView>>(responseData);
             }
-            //ViewBag.Create = CreateGroup();
+
             return View(group);
         }
+
         public IActionResult CreateGroup()
         {
-            //ViewBag.Indexx = Index();
+
             TempData["Done"] = null;
             return View();
         }
-
-
         [HttpPost]
         public IActionResult CreateGroup(CreateGroup model)
         {
@@ -96,7 +78,7 @@ namespace Todo.Web.Controllers
 
             if (result > 0)
             {
-                TempData["Done"] = "đã tạo Group thành công";
+                TempData["Done"] = "Group create successfully";
             }
             ModelState.Clear();
             return View(new CreateGroup() { });
@@ -135,9 +117,6 @@ namespace Todo.Web.Controllers
             TempData["Fail"] = null;
             return View(group);
         }
-
-
-
         [HttpPost]
         public IActionResult UpdateGroup(UpdateGroup model)
         {
@@ -161,12 +140,12 @@ namespace Todo.Web.Controllers
 
             if (result > 0)
             {
-                TempData["Done"] = "đã cập nhật Group thành công";
+                TempData["Done"] = "Group edit successfully";
                 ModelState.Clear();
             }
             else
             {
-                TempData["Fail"] = "đã cập nhật Group thành công";
+                TempData["Fail"] = "Group edit fail";
             }
 
             return View(new UpdateGroup() { });

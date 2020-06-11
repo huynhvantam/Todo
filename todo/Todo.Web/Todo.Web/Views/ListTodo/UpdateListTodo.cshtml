@@ -8,10 +8,10 @@
     int todoListIDV = ViewBag.TodoListID;
 }
 
-    <div>
-        <h1>  <a class="fas fa-arrow-alt-circle-left" asp-controller="ListTodo" asp-action="Index" asp-route-id="@todoListIDV"></a>  Edit Task</h1>
+<div>
+    <h1>  <a class="fas fa-arrow-alt-circle-left" asp-controller="ListTodo" asp-action="Index" asp-route-id="@todoListIDV"></a> Todo @ViewBag.TodoListIDd > Edit List</h1>
 
-    </div>
+</div>
 <hr />
 <div class="row">
     <div class="col-md-4">
@@ -26,7 +26,7 @@
             }
             <div class="form-group">
                 <label asp-for="IDL" class="control-label" hidden></label>
-                <input asp-for="IDL" class="form-control"  hidden/>
+                <input asp-for="IDL" class="form-control" hidden />
                 <span asp-validation-for="IDL" class="text-danger"></span>
             </div>
             <div class="form-group">
@@ -36,7 +36,7 @@
             </div>
             <div class="form-group">
                 <label asp-for="TodoID" class="control-label" hidden></label>
-                <input asp-for="TodoID" class="form-control"  hidden/>
+                <input asp-for="TodoID" class="form-control" hidden />
                 <span asp-validation-for="TodoID" class="text-danger"></span>
             </div>
             <div class="form-group">

@@ -6,12 +6,12 @@
     var todoListV = new List<Todo.Web.Models.ListTodo.TodoItem>();
     todoListV = ViewBag.TodoList;
     int todoListIDV = ViewBag.TodoListID;
-  
+
 }
 
 <div>
 
-    <h1>  <a class="fas fa-arrow-alt-circle-left" asp-controller="ListTodo" asp-action="Index" asp-route-id="@todoListIDV"></a>  Create Todo: @ViewBag.TodoListIDd </h1>
+    <h1>  <a class="fas fa-arrow-alt-circle-left" asp-controller="ListTodo" asp-action="Index" asp-route-id="@todoListIDV"></a> Todo @ViewBag.TodoListIDd > Create List </h1>
 </div>
 
 <hr />
@@ -24,12 +24,12 @@
                 <p class="alert alert-success"> @TempData["Done"]</p>
             }
 
-            <div class="form-group" >
+            <div class="form-group">
                 <label asp-for="TodoID" class="control-label" hidden></label>
                 <select asp-for="TodoID" class="form-control" hidden>
                     @foreach (var item in todoListV)
                     {
-                        <option  value="@item.ID" selected="@(item.ID ==todoListIDV)">@item.TaskName</option>
+                        <option value="@item.ID" selected="@(item.ID ==todoListIDV)">@item.TaskName</option>
                     }
                 </select>
                 <span asp-validation-for="TodoID" class="text-danger"></span>

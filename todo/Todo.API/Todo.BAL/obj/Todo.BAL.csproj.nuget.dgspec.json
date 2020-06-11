@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Admin\\Desktop\\project\\Todo\\todo\\Todo.API\\Todo.BAL\\Todo.BAL.csproj": {}
+    "C:\\Users\\tamhv\\Desktop\\project\\Todo\\Todo\\todo\\Todo.API\\Todo.BAL\\Todo.BAL.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Admin\\Desktop\\project\\Todo\\todo\\Todo.API\\Todo.BAL.Interface\\Todo.BAL.Interface.csproj": {
+    "C:\\Users\\tamhv\\Desktop\\project\\Todo\\Todo\\todo\\Todo.API\\Todo.BAL.Interface\\Todo.BAL.Interface.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Admin\\Desktop\\project\\Todo\\todo\\Todo.API\\Todo.BAL.Interface\\Todo.BAL.Interface.csproj",
+        "projectUniqueName": "C:\\Users\\tamhv\\Desktop\\project\\Todo\\Todo\\todo\\Todo.API\\Todo.BAL.Interface\\Todo.BAL.Interface.csproj",
         "projectName": "Todo.BAL.Interface",
-        "projectPath": "C:\\Users\\Admin\\Desktop\\project\\Todo\\todo\\Todo.API\\Todo.BAL.Interface\\Todo.BAL.Interface.csproj",
-        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Admin\\Desktop\\project\\Todo\\todo\\Todo.API\\Todo.BAL.Interface\\obj\\",
+        "projectPath": "C:\\Users\\tamhv\\Desktop\\project\\Todo\\Todo\\todo\\Todo.API\\Todo.BAL.Interface\\Todo.BAL.Interface.csproj",
+        "packagesPath": "C:\\Users\\tamhv\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\tamhv\\Desktop\\project\\Todo\\Todo\\todo\\Todo.API\\Todo.BAL.Interface\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\tamhv\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -30,8 +30,8 @@
         "frameworks": {
           "netstandard2.0": {
             "projectReferences": {
-              "C:\\Users\\Admin\\Desktop\\project\\Todo\\todo\\Todo.API\\Todo.Domain\\Todo.Domain.csproj": {
-                "projectPath": "C:\\Users\\Admin\\Desktop\\project\\Todo\\todo\\Todo.API\\Todo.Domain\\Todo.Domain.csproj"
+              "C:\\Users\\tamhv\\Desktop\\project\\Todo\\Todo\\todo\\Todo.API\\Todo.Domain\\Todo.Domain.csproj": {
+                "projectPath": "C:\\Users\\tamhv\\Desktop\\project\\Todo\\Todo\\todo\\Todo.API\\Todo.Domain\\Todo.Domain.csproj"
               }
             }
           }
@@ -62,24 +62,24 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.300\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.202\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Admin\\Desktop\\project\\Todo\\todo\\Todo.API\\Todo.BAL\\Todo.BAL.csproj": {
+    "C:\\Users\\tamhv\\Desktop\\project\\Todo\\Todo\\todo\\Todo.API\\Todo.BAL\\Todo.BAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Admin\\Desktop\\project\\Todo\\todo\\Todo.API\\Todo.BAL\\Todo.BAL.csproj",
+        "projectUniqueName": "C:\\Users\\tamhv\\Desktop\\project\\Todo\\Todo\\todo\\Todo.API\\Todo.BAL\\Todo.BAL.csproj",
         "projectName": "Todo.BAL",
-        "projectPath": "C:\\Users\\Admin\\Desktop\\project\\Todo\\todo\\Todo.API\\Todo.BAL\\Todo.BAL.csproj",
-        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Admin\\Desktop\\project\\Todo\\todo\\Todo.API\\Todo.BAL\\obj\\",
+        "projectPath": "C:\\Users\\tamhv\\Desktop\\project\\Todo\\Todo\\todo\\Todo.API\\Todo.BAL\\Todo.BAL.csproj",
+        "packagesPath": "C:\\Users\\tamhv\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\tamhv\\Desktop\\project\\Todo\\Todo\\todo\\Todo.API\\Todo.BAL\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\tamhv\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -92,11 +92,11 @@
         "frameworks": {
           "netstandard2.0": {
             "projectReferences": {
-              "C:\\Users\\Admin\\Desktop\\project\\Todo\\todo\\Todo.API\\Todo.BAL.Interface\\Todo.BAL.Interface.csproj": {
-                "projectPath": "C:\\Users\\Admin\\Desktop\\project\\Todo\\todo\\Todo.API\\Todo.BAL.Interface\\Todo.BAL.Interface.csproj"
+              "C:\\Users\\tamhv\\Desktop\\project\\Todo\\Todo\\todo\\Todo.API\\Todo.BAL.Interface\\Todo.BAL.Interface.csproj": {
+                "projectPath": "C:\\Users\\tamhv\\Desktop\\project\\Todo\\Todo\\todo\\Todo.API\\Todo.BAL.Interface\\Todo.BAL.Interface.csproj"
               },
-              "C:\\Users\\Admin\\Desktop\\project\\Todo\\todo\\Todo.API\\Todo.DAL.Interface\\Todo.DAL.Interface.csproj": {
-                "projectPath": "C:\\Users\\Admin\\Desktop\\project\\Todo\\todo\\Todo.API\\Todo.DAL.Interface\\Todo.DAL.Interface.csproj"
+              "C:\\Users\\tamhv\\Desktop\\project\\Todo\\Todo\\todo\\Todo.API\\Todo.DAL.Interface\\Todo.DAL.Interface.csproj": {
+                "projectPath": "C:\\Users\\tamhv\\Desktop\\project\\Todo\\Todo\\todo\\Todo.API\\Todo.DAL.Interface\\Todo.DAL.Interface.csproj"
               }
             }
           }
@@ -127,24 +127,24 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.300\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.202\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Admin\\Desktop\\project\\Todo\\todo\\Todo.API\\Todo.DAL.Interface\\Todo.DAL.Interface.csproj": {
+    "C:\\Users\\tamhv\\Desktop\\project\\Todo\\Todo\\todo\\Todo.API\\Todo.DAL.Interface\\Todo.DAL.Interface.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Admin\\Desktop\\project\\Todo\\todo\\Todo.API\\Todo.DAL.Interface\\Todo.DAL.Interface.csproj",
+        "projectUniqueName": "C:\\Users\\tamhv\\Desktop\\project\\Todo\\Todo\\todo\\Todo.API\\Todo.DAL.Interface\\Todo.DAL.Interface.csproj",
         "projectName": "Todo.DAL.Interface",
-        "projectPath": "C:\\Users\\Admin\\Desktop\\project\\Todo\\todo\\Todo.API\\Todo.DAL.Interface\\Todo.DAL.Interface.csproj",
-        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Admin\\Desktop\\project\\Todo\\todo\\Todo.API\\Todo.DAL.Interface\\obj\\",
+        "projectPath": "C:\\Users\\tamhv\\Desktop\\project\\Todo\\Todo\\todo\\Todo.API\\Todo.DAL.Interface\\Todo.DAL.Interface.csproj",
+        "packagesPath": "C:\\Users\\tamhv\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\tamhv\\Desktop\\project\\Todo\\Todo\\todo\\Todo.API\\Todo.DAL.Interface\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\tamhv\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -157,8 +157,8 @@
         "frameworks": {
           "netstandard2.0": {
             "projectReferences": {
-              "C:\\Users\\Admin\\Desktop\\project\\Todo\\todo\\Todo.API\\Todo.Domain\\Todo.Domain.csproj": {
-                "projectPath": "C:\\Users\\Admin\\Desktop\\project\\Todo\\todo\\Todo.API\\Todo.Domain\\Todo.Domain.csproj"
+              "C:\\Users\\tamhv\\Desktop\\project\\Todo\\Todo\\todo\\Todo.API\\Todo.Domain\\Todo.Domain.csproj": {
+                "projectPath": "C:\\Users\\tamhv\\Desktop\\project\\Todo\\Todo\\todo\\Todo.API\\Todo.Domain\\Todo.Domain.csproj"
               }
             }
           }
@@ -189,24 +189,24 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.300\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.202\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Admin\\Desktop\\project\\Todo\\todo\\Todo.API\\Todo.Domain\\Todo.Domain.csproj": {
+    "C:\\Users\\tamhv\\Desktop\\project\\Todo\\Todo\\todo\\Todo.API\\Todo.Domain\\Todo.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Admin\\Desktop\\project\\Todo\\todo\\Todo.API\\Todo.Domain\\Todo.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\tamhv\\Desktop\\project\\Todo\\Todo\\todo\\Todo.API\\Todo.Domain\\Todo.Domain.csproj",
         "projectName": "Todo.Domain",
-        "projectPath": "C:\\Users\\Admin\\Desktop\\project\\Todo\\todo\\Todo.API\\Todo.Domain\\Todo.Domain.csproj",
-        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Admin\\Desktop\\project\\Todo\\todo\\Todo.API\\Todo.Domain\\obj\\",
+        "projectPath": "C:\\Users\\tamhv\\Desktop\\project\\Todo\\Todo\\todo\\Todo.API\\Todo.Domain\\Todo.Domain.csproj",
+        "packagesPath": "C:\\Users\\tamhv\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\tamhv\\Desktop\\project\\Todo\\Todo\\todo\\Todo.API\\Todo.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\tamhv\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -247,7 +247,7 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.300\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.202\\RuntimeIdentifierGraph.json"
         }
       }
     }

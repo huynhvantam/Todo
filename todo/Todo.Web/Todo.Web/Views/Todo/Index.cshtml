@@ -13,7 +13,7 @@
     <div class="row">
         <div class="col-md-8">
             <p>
-                <a class="btn btn-outline-primary" asp-controller="Todo" asp-action="CreateTodo">Create Task</a>
+                <a class="btn btn-outline-primary" asp-controller="Todo" asp-action="CreateTodo">Create Todo</a>
 
             </p>
         </div>
@@ -29,20 +29,15 @@
     </div>
 </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 <style>
+    #colorfinish {
+        color: dodgerblue
+    }
+
+    #coloryellow {
+        color: yellow
+    }
+
     #colorcornflowerblue {
         color: cornflowerblue;
     }
@@ -68,7 +63,7 @@
     }
 </style>
 
-<table class="table" width=100%>
+<table class="table center-parent" width=100%>
     <thead class="thead-dark">
         <tr>
 
@@ -82,13 +77,13 @@
             <th width=80%>
                 @Html.DisplayNameFor(model => model.TaskName)
             </th>
-            <th width=10%>
+            <th width=12%>
                 Add
             </th>
             <th class="center-parent" width=5%>
                 @Html.DisplayNameFor(model => model.Important)
             </th>
-            <th class="center-parent" width=5%>
+            <th class="center-parent" width=3%>
                 Edit
             </th>
 
@@ -140,14 +135,14 @@
                     {
                         <td class="center-parent">
                             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-                            @Html.ActionLink("", "ImportantTodoGroup", "Todo", new { id = item.ID }, new { @class = "fa fa-star-o", onclick = "return confirm('Finish Todo" })
+                            @Html.ActionLink("", "ImportantTodoGroup", "Todo", new { id = item.ID }, new { @class = "fa fa-star-o" })
 
                         </td>
                     }
                     else
                     {
                         <td class="center-parent">
-                            @Html.ActionLink("", "ImportantTodoGroup", "Todo", new { id = item.ID }, new { @class = "fa fa-star", onclick = "return confirm('Finish Todo" })
+                            @Html.ActionLink("", "ImportantTodoGroup", "Todo", new { id = item.ID }, new { @class = "fa fa-star" })
                         </td>
                     }
                 }
@@ -157,13 +152,13 @@
 
                 <td>
                     @Html.DisplayFor(modelItem => item.Progress)
-                    @Html.ActionLink("", "ProgressEditGroup", "Todo", new { id = item.ID }, new { @id = "colorred", @class = "fa fa-flag-checkered", onclick = "return confirm('Finish Todo" })
+                    @Html.ActionLink("", "ProgressEditGroup", "Todo", new { id = item.ID }, new { @id = "colorfinish", @class = "fa fa-flag-checkered" })
                 </td>
                 <td class="center-parent">
-                    @Html.ActionLink("", "FinishTodoGroup", "Todo", new { id = item.ID }, new { @id = "colorred", @class = "fa fa-flag-checkered", onclick = "return confirm('Finish Todo" })
+                    @Html.ActionLink("", "FinishTodoGroup", "Todo", new { id = item.ID }, new { @id = "colorred", @class = "fa fa-flag-checkered", onclick = "return confirm('Are you sure to finish todo?')" })
                 </td>
                 <td class="center-parent">
-                    @Html.ActionLink("", "DeleteTodoGroup", "Todo", new { id = item.ID }, new { @id = "colorblack", @class = "fas fa-trash-alt", onclick = "return confirm('Bạn có muốn xóa To-to List này?')" })
+                    @Html.ActionLink("", "DeleteTodoGroup", "Todo", new { id = item.ID }, new { @id = "colorblack", @class = "fas fa-trash-alt", onclick = "return confirm('Are you sure to delete todo?')" })
                 </td>
                 <td>
                 </td>
