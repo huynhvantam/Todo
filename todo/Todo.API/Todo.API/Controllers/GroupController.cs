@@ -11,6 +11,7 @@ using Todo.Domain.Response;
 namespace Todo.API.Controllers
 {
 
+
     [ApiController]
     public class GroupController : ControllerBase
     {
@@ -20,12 +21,24 @@ namespace Todo.API.Controllers
             _groupService = groupService;
         }
 
+
+
+
+
+
+
+
+
+
+
+
         [HttpGet]
         [Route("api/group/getlistgroup")]
         public IEnumerable<GroupRes> GetListGroupCT()
         {
             return _groupService.GetListGroupSV();
         }
+
 
 
         [HttpGet]
