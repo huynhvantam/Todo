@@ -84,7 +84,6 @@ C:\Users\tamhv\Desktop\project\Todo\todo\Todo.Web\Todo.Web\obj\Debug\netcoreapp2
 C:\Users\tamhv\Desktop\project\Todo\todo\Todo.Web\Todo.Web\obj\Debug\netcoreapp2.2\Todo.Web.pdb
 C:\Users\tamhv\Desktop\project\Todo\todo\Todo.Web\Todo.Web\obj\Debug\netcoreapp2.2\Todo.Web.genruntimeconfig.cache
 C:\Users\tamhv\Desktop\project\Todo\todo\Todo.Web\Todo.Web\obj\Debug\netcoreapp2.2\Todo.Web.csproj.CopyComplete
-C:\Users\tamhv\Desktop\project\Todo\todo\Todo.Web\Todo.Web\obj\Debug\netcoreapp2.2\Razor\Views\Todo\SearchTask.cshtml.g.cs
 C:\Users\tamhv\Desktop\project\Todo\Todo\todo\Todo.Web\Todo.Web\bin\Debug\netcoreapp2.2\appsettings.Development.json
 C:\Users\tamhv\Desktop\project\Todo\Todo\todo\Todo.Web\Todo.Web\bin\Debug\netcoreapp2.2\appsettings.json
 C:\Users\tamhv\Desktop\project\Todo\Todo\todo\Todo.Web\Todo.Web\bin\Debug\netcoreapp2.2\Properties\launchSettings.json
@@ -178,3 +177,6 @@ C:\Users\Admin\Desktop\project\Todo\todo\Todo.Web\Todo.Web\obj\Debug\netcoreapp2
 C:\Users\Admin\Desktop\project\Todo\todo\Todo.Web\Todo.Web\obj\Debug\netcoreapp2.2\Todo.Web.csproj.CopyComplete
 C:\Users\Admin\Desktop\project\Todo\todo\Todo.Web\Todo.Web\obj\Debug\netcoreapp2.2\Razor\Views\ListTodo\UpdateListTodo.cshtml.g.cs
 C:\Users\tamhv\Desktop\project\Todo\Todo\todo\Todo.Web\Todo.Web\obj\Debug\netcoreapp2.2\Razor\Views\ListTodo\UpdateListTodo.cshtml.g.cs
+C:\Users\tamhv\Desktop\project\Todo\todo\Todo.Web\Todo.Web\obj\Debug\netcoreapp2.2\Razor\Views\ListTodo\CreateListTodo.cshtml.g.cs
+C:\Users\tamhv\Desktop\project\Todo\todo\Todo.Web\Todo.Web\obj\Debug\netcoreapp2.2\Razor\Views\ListTodo\Index.cshtml.g.cs
+C:\Users\tamhv\Desktop\project\Todo\todo\Todo.Web\Todo.Web\obj\Debug\netcoreapp2.2\Razor\Views\ListTodo\UpdateListTodo.cshtml.g.cs

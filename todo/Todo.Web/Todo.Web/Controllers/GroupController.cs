@@ -50,7 +50,6 @@ namespace Todo.Web.Controllers
 
         public IActionResult CreateGroup()
         {
-
             TempData["Done"] = null;
             return View();
         }
@@ -67,7 +66,6 @@ namespace Todo.Web.Controllers
                 var json = JsonConvert.SerializeObject(model);
                 streamWrite.Write(json);
             }
-
             var httpResponse = (HttpWebResponse)httpWebRequest.GetResponse();
             using (var streamReader = new StreamReader(httpResponse.GetResponseStream()))
             {
@@ -117,6 +115,7 @@ namespace Todo.Web.Controllers
             TempData["Fail"] = null;
             return View(group);
         }
+
         [HttpPost]
         public IActionResult UpdateGroup(UpdateGroup model)
         {

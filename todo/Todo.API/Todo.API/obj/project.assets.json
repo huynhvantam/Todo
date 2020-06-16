@@ -13542,11 +13542,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\tamhv\\Desktop\\project\\Todo\\Todo\\todo\\Todo.API\\Todo.API\\Todo.API.csproj",
+      "projectUniqueName": "C:\\Users\\tamhv\\Desktop\\project\\Todo\\todo\\Todo.API\\Todo.API\\Todo.API.csproj",
       "projectName": "Todo.API",
-      "projectPath": "C:\\Users\\tamhv\\Desktop\\project\\Todo\\Todo\\todo\\Todo.API\\Todo.API\\Todo.API.csproj",
+      "projectPath": "C:\\Users\\tamhv\\Desktop\\project\\Todo\\todo\\Todo.API\\Todo.API\\Todo.API.csproj",
       "packagesPath": "C:\\Users\\tamhv\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\tamhv\\Desktop\\project\\Todo\\Todo\\todo\\Todo.API\\Todo.API\\obj\\",
+      "outputPath": "C:\\Users\\tamhv\\Desktop\\project\\Todo\\todo\\Todo.API\\Todo.API\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -13565,20 +13565,20 @@
       "frameworks": {
         "netcoreapp2.2": {
           "projectReferences": {
-            "C:\\Users\\tamhv\\Desktop\\project\\Todo\\Todo\\todo\\Todo.API\\Todo.BAL.Interface\\Todo.BAL.Interface.csproj": {
-              "projectPath": "C:\\Users\\tamhv\\Desktop\\project\\Todo\\Todo\\todo\\Todo.API\\Todo.BAL.Interface\\Todo.BAL.Interface.csproj"
+            "C:\\Users\\tamhv\\Desktop\\project\\Todo\\todo\\Todo.API\\Todo.BAL.Interface\\Todo.BAL.Interface.csproj": {
+              "projectPath": "C:\\Users\\tamhv\\Desktop\\project\\Todo\\todo\\Todo.API\\Todo.BAL.Interface\\Todo.BAL.Interface.csproj"
             },
-            "C:\\Users\\tamhv\\Desktop\\project\\Todo\\Todo\\todo\\Todo.API\\Todo.BAL\\Todo.BAL.csproj": {
-              "projectPath": "C:\\Users\\tamhv\\Desktop\\project\\Todo\\Todo\\todo\\Todo.API\\Todo.BAL\\Todo.BAL.csproj"
+            "C:\\Users\\tamhv\\Desktop\\project\\Todo\\todo\\Todo.API\\Todo.BAL\\Todo.BAL.csproj": {
+              "projectPath": "C:\\Users\\tamhv\\Desktop\\project\\Todo\\todo\\Todo.API\\Todo.BAL\\Todo.BAL.csproj"
             },
-            "C:\\Users\\tamhv\\Desktop\\project\\Todo\\Todo\\todo\\Todo.API\\Todo.DAL.Interface\\Todo.DAL.Interface.csproj": {
-              "projectPath": "C:\\Users\\tamhv\\Desktop\\project\\Todo\\Todo\\todo\\Todo.API\\Todo.DAL.Interface\\Todo.DAL.Interface.csproj"
+            "C:\\Users\\tamhv\\Desktop\\project\\Todo\\todo\\Todo.API\\Todo.DAL.Interface\\Todo.DAL.Interface.csproj": {
+              "projectPath": "C:\\Users\\tamhv\\Desktop\\project\\Todo\\todo\\Todo.API\\Todo.DAL.Interface\\Todo.DAL.Interface.csproj"
             },
-            "C:\\Users\\tamhv\\Desktop\\project\\Todo\\Todo\\todo\\Todo.API\\Todo.DAL\\Todo.DAL.csproj": {
-              "projectPath": "C:\\Users\\tamhv\\Desktop\\project\\Todo\\Todo\\todo\\Todo.API\\Todo.DAL\\Todo.DAL.csproj"
+            "C:\\Users\\tamhv\\Desktop\\project\\Todo\\todo\\Todo.API\\Todo.DAL\\Todo.DAL.csproj": {
+              "projectPath": "C:\\Users\\tamhv\\Desktop\\project\\Todo\\todo\\Todo.API\\Todo.DAL\\Todo.DAL.csproj"
             },
-            "C:\\Users\\tamhv\\Desktop\\project\\Todo\\Todo\\todo\\Todo.API\\Todo.Domain\\Todo.Domain.csproj": {
-              "projectPath": "C:\\Users\\tamhv\\Desktop\\project\\Todo\\Todo\\todo\\Todo.API\\Todo.Domain\\Todo.Domain.csproj"
+            "C:\\Users\\tamhv\\Desktop\\project\\Todo\\todo\\Todo.API\\Todo.Domain\\Todo.Domain.csproj": {
+              "projectPath": "C:\\Users\\tamhv\\Desktop\\project\\Todo\\todo\\Todo.API\\Todo.Domain\\Todo.Domain.csproj"
             }
           }
         }
